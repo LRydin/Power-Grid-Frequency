@@ -1,38 +1,45 @@
-# Power-Grid-Frequency-Data
+# Power-Grid Frequency
 
-Power-grid frequency data from around the world, cleaned and processed for research usage
+Power-grid frequency data from around the world, cleaned and processed for research usage.
 
 The data is collected from the TSO's and is processed to remove dead recordings, spikes, and other naturally assumed bad measurements. The scripts that are used to clean the data are also included, for transparency.
 
-The
-
 # European Grids
 
-Available are recording from the Continental Europe (UTCE) area: Germany, France.
-From Great Britain (United Kingdom). From the Nordic Grid, from Fingrid.
+The available recordings from Europe are of the following synchronous regions
 
-## Germany - TransNet BW
-These recordings are obtained from the [TransNet BW](https://www.transnetbw.com/en/energy-market/ancillary-services/control-reserve-demand-activation)
+ - Continental Europe:
+   - Germany [1 sec recordings] - [TransnetBW](https://www.transnetbw.com/en/energy-market/ancillary-services/control-reserve-demand-activation)
+   - Germany [1 sec recordings] - [50hertz](https://www.50hertz.com/de/) - currently not working
+   - France [10 sec recordings]- [RTE](https://clients.rte-france.com/lang/an/visiteurs/vie/vie_frequence.jsp)
+
+ - Nordic Grid:
+   - Finland [0.1 sec recordings] - [FinGrid](https://data.fingrid.fi/en/dataset/frequency-historical-data)
+
+ - Great Britain:
+   - England [1 sec recordings] - [NationalGrid ESO](https://www.nationalgrideso.com/balancing-services/frequency-response-services/historic-frequency-data)
 
 
-# Todo
+## Available data
 
-### Scripts to clean data to include
+|   | Germany | France | Great Britain | Nordic Grid |
+|:-----:|:------------------:|:---:|:---:|:---:|
+| 2019  | :heavy_check_mark: | :x: | :x: | :x: |
+| 2018  | :heavy_check_mark: | :x: | :x: | :x: |
+| 2017  | :heavy_check_mark: | :x: | :x: | :x: |
+| 2016  | :heavy_check_mark: | :x: | :x: | :x: |
+| 2015  | :heavy_check_mark: | :x: | :x: | :x: |
+| 2014  | :heavy_check_mark: | :x: | :x: |  -- |
+| 2013  | :heavy_check_mark: |  -- |  -- |  -- |
+| 2012  | :heavy_check_mark: |  -- |  -- |  -- |
+| 2011  | :heavy_check_mark: |  -- |  -- |  -- |
+
+
+## Available scripts
 
 | Germany | France | Great Britain | Nordic Grid |
 |:---:|:---:|:---:|:---:|
-| :x: | :x: | :x: | :x: |
-
-### Data to upload still
-
-| Germany | France | Great Britain | Nordic Grid |
-|:---:|:---:|:---:|:---:|
-| :x: 2019 | :x: 2019 | :x: 2019 | :x: 2019 |
-| :x: 2018 | :x: 2018 | :x: 2018 | :x: 2018 |
-| :x: 2017 | :x: 2017 | :x: 2017 | :x: 2017 |
-| :x: 2016 | :x: 2016 | :x: 2016 | :x: 2016 |
-| :x: 2015 | :x: 2015 | :x: 2015 | :x: 2015 |
-| :x: 2014 | :x: 2014 | :x: 2014 | :x: 2014 |
+| :heavy_check_mark: | :x: | :x: | :x: |
 
 
 # Changelog
@@ -45,9 +52,7 @@ If you have open data from power-grid system, be it frequency, voltages, load, c
 
 ## Affiliated institutions and collaborators
 
-This project came to life by Leonardo Rydin Gorjão in 2018 on a GitHub repository
-
-This project is supported by Dirk Witthaut.
+This project came to life by Leonardo Rydin Gorjão in 2018 on a GitHub repository.
 
 ### Funding
 Helmholtz Association Initiative *Energy System 2050 - A Contribution of the Research Field Energy* and the grant No. VH-NG-1025.
