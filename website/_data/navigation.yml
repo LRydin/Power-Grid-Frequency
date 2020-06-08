@@ -1,0 +1,8 @@
+main:
+  - title: "Database"
+    url: /database/
+    description: Database and relevant links to other databased
+  - title: "Publications"
+    url: /publications/
+  - title: "Project"
+    url: /project/
