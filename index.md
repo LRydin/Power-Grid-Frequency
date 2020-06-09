@@ -1,12 +1,18 @@
 ---
 Title: Home
 
-leaflet: true
-latlng: [42.42, 2.22]
-zoom: 12
-mlatlng: [42.11, 2.44]
-icon: path/to/yourMarker.png
-mpop: comment for your popup
+latlng: [42.41, 2.22]
+zoom: 5
+mlatlng: [52.11, 12.44]
+icon: _sass/js/images/marker-icon-2x.png
+mpop: KIT
+
+
+lon: [51.8,64.1,62.1,28.1,39.5,49.0,53.1,38.7 ,41.0 ,51.5 ,59.4 ,59.3,40.6,30.5,-33.9,59.8, 46.679, 47.6842]
+lat: [ -8.4,-21.7,-7.1,-15.4, 2.6, 8.4,8.2,-9.1, 28.9,-0.0, 24.7, 18.1 , -111.8 ,-96.3 , 18.5 ,30.3, 21, 17.6344]
+locations: ['Cork', 'Reykjavik', 'Vestmanna', 'Gran Canaria', 'Palma de Mallorca','Karlsruhe','Oldenburg','Lisbon', 'Istanbul', 'London', 'Tallinn', 'Stockholm', 'Salt Lake City', 'College Station', 'Cape Town', 'St Petersburg', 'Békéscsaba', 'Győr']
+
+
 
 menus:
   main:
@@ -27,7 +33,6 @@ classes: wide
 <div id="map" class="leafmap"></div>
 
 <script>
-{% if page.leaflet %}
 // L.Icon.Default.imagePath = '{{ "images/carto/" | prepend: site.baseurl }}';
 
 var viirs = 'VIIRS_SNPP_CorrectedReflectance_TrueColor';
@@ -72,32 +77,17 @@ var map = L.map('map', {
   {% endif %}
 	{% endif %}
 });
-map.scrollWheelZoom.disable();
-{% endif %}
 
-{% if page.mlatlng %}
+
+{% for i in (0..17) %}
 var marker = L.marker(
-  [{{ page.mlatlng[0] }}, {{ page.mlatlng[1] }}]
+  [{{ page.lon[i] }}, {{ page.lat[i] }}]
 ).addTo(map);
-{% endif %}
+marker.bindPopup("{{ page.locations[i] }}").openPopup();
+{% endfor %}
 
-{% if page.icon %}
-var xmarker = L.icon({
-  iconUrl: '{{ page.icon | prepend: site.baseurl }}',
-  iconRetinaUrl: '{{ page.icon | prepend: site.baseurl }}',
-  iconSize: [37, 50],
-  iconAnchor: [18.5, 50],
-  popupAnchor: [0, -51]
-});
 
-var marker = L.marker([{{ page.mlatlng[0] }}, {{ page.mlatlng[1] }}], {
-  icon: {{ page.icon }}
-}).addTo(map);
-{% endif %}
-
-{% if page.mpop or page.icon %}
-marker.bindPopup("{{ page.mpop }}").openPopup();
-{% endif %}
 </script>
+
 
 {% include_relative details.md %}
