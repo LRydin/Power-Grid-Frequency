@@ -1,0 +1,29 @@
+title: Power-grid frequency database
+repository: LRydin/Power-Grid-Frequency
+baseurl: /
+permalink: '/:title/'
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "dark"
+
+footer:
+  tagline: Power-grid frequency recordings database
+  content: '&copy; Leonardo Rydin Gorjão'
+  #links:
+  #  - text: Made with Jekyll
+  #    new_window: true
+sass:
+  indentWidth: 4
+  style: nested
+  precision: 10
+plugins:
+  - jekyll-menus
+  - jekyll-include-cache
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - netlify.toml
+  - "vendor"
+  - "package.json"
