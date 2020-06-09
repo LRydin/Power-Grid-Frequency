@@ -4,5 +4,7 @@ main:
     description: Database and relevant links to other databased
   - title: "Publications"
     url: /publications/
+    description: Publications associated with the database, data analysis, measurement devices, and data processing
   - title: "Project"
     url: /project/
+    description: The project's goal, people involved, and the bigger picture
