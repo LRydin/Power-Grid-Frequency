@@ -27,9 +27,25 @@ classes: wide
 	width:100%;
 	height:500px;
 }
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h9 {
+    margin: 0 0 5px;
+    color: #000000;
+}
 </style>
 
 <div id="map" class="leafmap"></div>
+
+<script type="text/javascript" src="assets/GeoJSON/WesternInterconnection.js"></script>
+<script type="text/javascript" src="assets/GeoJSON/TexasInterconnection.js"></script>
+
 
 <script>
 
@@ -66,14 +82,14 @@ var Cork     	      = L.marker([ 51.8, -8.4  ]).bindPopup('Cork'),
 
 var Europe = L.layerGroup([Cork, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Tallinn, Stockholm]);
 
-var USA = L.layerGroup([SaltLake, College]);
+var NorthAmerica = L.layerGroup([SaltLake, College]);
 
 var Africa = L.layerGroup([CapeTown]);
 
 
 var overlayMaps = {
     "<span style='color: black'>Europe</span>": Europe,
-		"<span style='color: black'>USA</span>": USA,
+		"<span style='color: black'>North America</span>": NorthAmerica,
 		"<span style='color: black'>Africa</span>": Africa
 };
 
@@ -81,11 +97,64 @@ var overlayMaps = {
 var map = L.map('map', {
   'center': [25, -5],
   'zoom': 2,
-  'layers': [basemap.OpenStreetMap, Europe, USA, Africa]
+  'layers': [basemap.OpenStreetMap, Europe, NorthAmerica, Africa]
 });
 
 
 L.control.layers(basemap, overlayMaps).addTo(map);
+
+// Power-grids
+
+function style(feature) {
+    return {
+        fillColor: feature.colour,
+        weight: 0,
+        fillOpacity: 0.7
+    };
+}
+
+
+
+var info = L.control();
+
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+    this.update();
+    return this._div;
+};
+
+// method that we will use to update the control based on feature properties passed
+info.update = function (props) {
+    this._div.innerHTML = '<h9>Synchronous Areas</h9><br />' +  (props ?
+        '<b><h9>' + props.name + '</h9></b><br />'
+        : '<h9>Hover over a power-grid</h9>');
+};
+
+
+
+function highlightFeature(e) {
+		var layer = e.target;
+    info.update(layer.feature.properties);
+}
+
+function resetHighlight(e) {
+    info.update();
+}
+
+function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight
+    });
+}
+
+
+
+
+L.geoJson(WesternInterconnectionGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(TexasInterconnectionGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+
+info.addTo(map);
 
 </script>
 
