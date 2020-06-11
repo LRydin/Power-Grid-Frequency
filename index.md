@@ -1,18 +1,6 @@
 ---
 Title: Home
 
-leaflet: True
-latlng: [25, -15]
-zoom: 2
-mlatlng: [52.11, 12.44]
-icon: assests/js/images/marker-icon.png
-mpop: KIT
-
-lon: [51.8,64.1,62.1,28.1,39.5,49.0,53.1,38.7 ,41.0 ,51.5 ,59.4 ,59.3,40.6,30.5,-33.9,59.8, 46.679, 47.6842]
-lat: [ -8.4,-21.7,-7.1,-15.4, 2.6, 8.4,8.2,-9.1, 28.9,-0.0, 24.7, 18.1 , -111.8 ,-96.3 , 18.5 ,30.3, 21, 17.6344]
-locations: ['Cork', 'Reykjavik', 'Vestmanna', 'Gran Canaria', 'Palma de Mallorca','Karlsruhe','Oldenburg','Lisbon', 'Istanbul', 'London', 'Tallinn', 'Stockholm', 'Salt Lake City', 'College Station', 'Cape Town', 'St Petersburg', 'Békéscsaba', 'Győr']
-
-
 menus:
   main:
     weight: 1
@@ -28,6 +16,14 @@ classes: wide
 	height:500px;
 }
 .info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info2 {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
     background: white;
@@ -60,24 +56,47 @@ var basemap = {
 };
 
 
-var Cork     	      = L.marker([ 51.8, -8.4  ]).bindPopup('Cork'),
-    Reykjavik     	= L.marker([ 64.1, -21.7 ]).bindPopup('Reykjavik'),
-    Vestmanna     	= L.marker([ 62.1, -7.1  ]).bindPopup('Vestmanna'),
-    GranCanaria     = L.marker([ 28.1, -15.4 ]).bindPopup('Gran Canaria'),
-    PalmaMallorca 	= L.marker([ 39.5,  2.6  ]).bindPopup('Palma de Mallorca'),
-    Karlsruhe     	= L.marker([ 49.0,  8.4  ]).bindPopup('Karlsruhe'),
-    Oldenburg     	= L.marker([ 53.1,  8.2  ]).bindPopup('Oldenburg'),
-    Lisbon        	= L.marker([ 38.7, -9.1  ]).bindPopup('Lisbon'),
-    Istanbul      	= L.marker([ 41.0,  28.9 ]).bindPopup('Istanbul'),
-    London        	= L.marker([ 51.5, -0.00 ]).bindPopup('London'),
-    Tallinn       	= L.marker([ 59.4,  24.7 ]).bindPopup('Tallinn'),
-    Stockholm     	= L.marker([ 59.3,  18.1 ]).bindPopup('Stockholm'),
-    SaltLake        = L.marker([ 40.6,-111.8 ]).bindPopup('Salt Lake City'),
-    College        	= L.marker([ 30.5, -96.3 ]).bindPopup('College Station'),
-    CapeTown        = L.marker([-33.9,  18.5 ]).bindPopup('Cape Town'),
-    StPetersburg    = L.marker([ 59.8,  30.3 ]).bindPopup('St Petersburg'),
-    Bekescsaba     	= L.marker([ 46.6,  21.0 ]).bindPopup('Békéscsaba'),
-    Gyor          	= L.marker([ 47.6,  17.6 ]).bindPopup('Győr');
+
+var greenIcon = L.icon({
+    iconUrl: 'assets/js/images/marker-icon-green.png',
+    shadowUrl: 'assets/js/images/marker-shadow.png',
+		iconSize:    [25, 41],
+		iconAnchor:  [12, 41],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+		shadowSize:  [41, 41]
+});
+
+var purpleIcon = L.icon({
+    iconUrl: 'assets/js/images/marker-icon-purple.png',
+    shadowUrl: 'assets/js/images/marker-shadow.png',
+		iconSize:    [25, 41],
+		iconAnchor:  [12, 41],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+		shadowSize:  [41, 41]
+});
+
+
+
+var Cork     	      = L.marker([ 51.8, -8.4 ], {icon: greenIcon}).bindPopup('Cork'),
+    Reykjavik     	= L.marker([ 64.1, -21.7], {icon: greenIcon}).bindPopup('Reykjavik'),
+    Vestmanna     	= L.marker([ 62.1, -7.1 ], {icon: greenIcon}).bindPopup('Vestmanna'),
+    GranCanaria     = L.marker([ 28.1, -15.4], {icon: greenIcon}).bindPopup('Gran Canaria'),
+    PalmaMallorca 	= L.marker([ 39.5,  2.6 ], {icon: greenIcon}).bindPopup('Palma de Mallorca'),
+    Karlsruhe     	= L.marker([ 49.0,  8.4 ], {icon: purpleIcon}).bindPopup('Karlsruhe'),
+    Oldenburg     	= L.marker([ 53.1,  8.2 ], {icon: purpleIcon}).bindPopup('Oldenburg'),
+    Lisbon        	= L.marker([ 38.7, -9.1 ], {icon: purpleIcon}).bindPopup('Lisbon'),
+    Istanbul      	= L.marker([ 41.0,  28.9], {icon: purpleIcon}).bindPopup('Istanbul'),
+    London        	= L.marker([ 51.5, -0.00], {icon: greenIcon}).bindPopup('London'),
+    Tallinn       	= L.marker([ 59.4,  24.7], {icon: greenIcon}).bindPopup('Tallinn'),
+    Stockholm     	= L.marker([ 59.3,  18.1], {icon: greenIcon}).bindPopup('Stockholm'),
+    SaltLake        = L.marker([ 40.6,-111.8], {icon: greenIcon}).bindPopup('Salt Lake City'),
+    College        	= L.marker([ 30.5, -96.3], {icon: greenIcon}).bindPopup('College Station'),
+    CapeTown        = L.marker([-33.9,  18.5], {icon: greenIcon}).bindPopup('Cape Town'),
+    StPetersburg    = L.marker([ 59.8,  30.3], {icon: greenIcon}).bindPopup('St Petersburg'),
+    Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: greenIcon}).bindPopup('Békéscsaba'),
+    Gyor          	= L.marker([ 47.6,  17.6], {icon: greenIcon}).bindPopup('Győr');
 
 
 var Europe = L.layerGroup([Cork, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Tallinn, Stockholm]);
@@ -85,6 +104,11 @@ var Europe = L.layerGroup([Cork, Reykjavik, Vestmanna, GranCanaria, PalmaMallorc
 var NorthAmerica = L.layerGroup([SaltLake, College]);
 
 var Africa = L.layerGroup([CapeTown]);
+
+var Synch = L.layerGroup([Karlsruhe, Oldenburg, Lisbon, Istanbul]);
+
+
+
 
 
 var overlayMaps = {
@@ -100,6 +124,23 @@ var map = L.map('map', {
   'layers': [basemap.OpenStreetMap, Europe, NorthAmerica, Africa]
 });
 
+
+var SynchMeasurements = [
+    [[49.0,  8.4],
+		[53.1,  8.2]],
+		[[49.0,  8.4],
+		[38.7, -9.1]],
+		[[49.0,  8.4],
+		[41.0,  28.9]]
+];
+
+
+var SynchMeasurementsLines = L.polyline(SynchMeasurements, {color: 'purple'}).addTo(map);
+
+SynchMeasurementsLines.bindPopup("Synchronous Measurements between Karlsruhe, Oldenburg, Lisbon, and Istanbul.")
+
+
+L.marker([50.505, 30.57], {icon: greenIcon}).addTo(map);
 
 L.control.layers(basemap, overlayMaps).addTo(map);
 
@@ -123,14 +164,11 @@ info.onAdd = function (map) {
     return this._div;
 };
 
-// method that we will use to update the control based on feature properties passed
 info.update = function (props) {
     this._div.innerHTML = '<h9>Synchronous Areas</h9><br />' +  (props ?
         '<b><h9>' + props.name + '</h9></b><br />'
-        : '<h9>Hover over a power-grid</h9>');
+        : '<h9>Hover over an area</h9>');
 };
-
-
 
 function highlightFeature(e) {
 		var layer = e.target;
@@ -148,13 +186,31 @@ function onEachFeature(feature, layer) {
     });
 }
 
+var legend = L.control({position: 'bottomleft'});
 
+legend.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'info legend'),
+        grades = [0, 10, 20, 50, 100, 200, 500, 1000],
+        labels = [];
+
+    div.innerHTML = '<img id="x" src="assets/js/images/marker-icon-purple.png" width="20" height="20"/>' + '<h9>  Synchronous Measurements </h9>';
+
+    return div;
+};
+
+legend.addTo(map);
 
 
 L.geoJson(WesternInterconnectionGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(TexasInterconnectionGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 
 info.addTo(map);
+
+
+
+
+
 
 </script>
 

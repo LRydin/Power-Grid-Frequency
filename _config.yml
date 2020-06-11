@@ -19,6 +19,9 @@ plugins:
   - jekyll-menus
   - jekyll-include-cache
 
+#search: true
+#search_full_content: true
+
 exclude:
   - Gemfile
   - Gemfile.lock
