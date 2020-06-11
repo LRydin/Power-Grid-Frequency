@@ -41,7 +41,10 @@ classes: wide
 
 <script type="text/javascript" src="assets/GeoJSON/WesternInterconnection.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/TexasInterconnection.js"></script>
-
+<script type="text/javascript" src="assets/GeoJSON/NordicGrid.js"></script>
+<script type="text/javascript" src="assets/GeoJSON/Russian.js"></script>
+<script type="text/javascript" src="assets/GeoJSON/Baltic.js"></script>
+<script type="text/javascript" src="assets/GeoJSON/NationalGrid.js"></script>
 
 <script>
 
@@ -49,7 +52,7 @@ var viirs = 'VIIRS_SNPP_CorrectedReflectance_TrueColor';
 
 var basemap = {
   'OpenStreetMap': L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    'attribution': '&copy; <a href="https://osmlab.github.io/attribution-mark/copyright/?name={{ site.title }}">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    'attribution': '&copy; <a href="https://osmlab.github.io/attribution-mark/copyright/?name={{ site.title }}">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Made with <a href="https://www.naturalearthdata.com/">Natural Earth</a>',
     'minZoom': 2,
     'maxZoom': 19
   })
@@ -99,17 +102,13 @@ var Cork     	      = L.marker([ 51.8, -8.4 ], {icon: greenIcon}).bindPopup('Cor
     Gyor          	= L.marker([ 47.6,  17.6], {icon: greenIcon}).bindPopup('Győr');
 
 
-var Europe = L.layerGroup([Cork, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Tallinn, Stockholm]);
+var Europe = L.layerGroup([Cork, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg]);
 
 var NorthAmerica = L.layerGroup([SaltLake, College]);
 
 var Africa = L.layerGroup([CapeTown]);
 
 var Synch = L.layerGroup([Karlsruhe, Oldenburg, Lisbon, Istanbul]);
-
-
-
-
 
 var overlayMaps = {
     "<span style='color: black'>Europe</span>": Europe,
@@ -134,13 +133,21 @@ var SynchMeasurements = [
 		[41.0,  28.9]]
 ];
 
+var SemiSynchMeasurements = [
+    [[49.0,  8.4],
+		[46.6,  21.0]],
+		[[49.0,  8.4],
+		[47.6,  17.6]]
+];
+
 
 var SynchMeasurementsLines = L.polyline(SynchMeasurements, {color: 'purple'}).addTo(map);
+var SemiSynchMeasurementsLines = L.polyline(SemiSynchMeasurements, {color: 'purple', dashArray: '6'}).addTo(map);
 
-SynchMeasurementsLines.bindPopup("Synchronous Measurements between Karlsruhe, Oldenburg, Lisbon, and Istanbul.")
 
+SynchMeasurementsLines.bindPopup("Synchronous Measurements between Karlsruhe, Oldenburg, Lisbon, and Istanbul. Békéscsaba and Győr, Hungary, also have recording, but not GPS synchronised.")
+SemiSynchMeasurementsLines.bindPopup("Measurements in Békéscsaba and Győr, Hungary, in the same time frame as between Karlsruhe, Oldenburg, Lisbon, and Istanbul.")
 
-L.marker([50.505, 30.57], {icon: greenIcon}).addTo(map);
 
 L.control.layers(basemap, overlayMaps).addTo(map);
 
@@ -150,7 +157,7 @@ function style(feature) {
     return {
         fillColor: feature.colour,
         weight: 0,
-        fillOpacity: 0.7
+        fillOpacity: 0.4
     };
 }
 
@@ -204,6 +211,12 @@ legend.addTo(map);
 
 L.geoJson(WesternInterconnectionGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(TexasInterconnectionGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(NordicGridGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(RussianGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(BalticGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(NationalGridGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+
+
 
 info.addTo(map);
 
