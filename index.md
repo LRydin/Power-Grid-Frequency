@@ -24,7 +24,7 @@ classes: wide
 <script type="text/javascript" src="assets/GeoJSON/Faroe.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/Mallorca.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/GranCanaria.js"></script>
-
+<script type="text/javascript" src="assets/GeoJSON/SouthAfrica.js"></script>
 
 <script>
 
@@ -60,33 +60,49 @@ var purpleIcon = L.icon({
 
 
 
-var Cork     	      = L.marker([ 51.8, -8.4 ], {icon: greenIcon}).bindPopup('Cork'),
-    Reykjavik     	= L.marker([ 64.1, -21.7], {icon: greenIcon}).bindPopup('Reykjavik'),
-    Vestmanna     	= L.marker([ 62.1, -7.1 ], {icon: greenIcon}).bindPopup('Vestmanna'),
-    GranCanaria     = L.marker([ 28.1, -15.4], {icon: greenIcon}).bindPopup('Gran Canaria'),
-    PalmaMallorca 	= L.marker([ 39.5,  2.6 ], {icon: greenIcon}).bindPopup('Palma de Mallorca'),
-    Karlsruhe     	= L.marker([ 49.0,  8.4 ], {icon: purpleIcon}).bindPopup('Karlsruhe'),
-    Oldenburg     	= L.marker([ 53.1,  8.2 ], {icon: purpleIcon}).bindPopup('Oldenburg'),
-    Lisbon        	= L.marker([ 38.7, -9.1 ], {icon: purpleIcon}).bindPopup('Lisbon'),
-    Istanbul      	= L.marker([ 41.0,  28.9], {icon: purpleIcon}).bindPopup('Istanbul'),
-    London        	= L.marker([ 51.5, -0.00], {icon: greenIcon}).bindPopup('London'),
-    Tallinn       	= L.marker([ 59.4,  24.7], {icon: greenIcon}).bindPopup('Tallinn'),
-    Stockholm     	= L.marker([ 59.3,  18.1], {icon: greenIcon}).bindPopup('Stockholm'),
-    SaltLake        = L.marker([ 40.6,-111.8], {icon: greenIcon}).bindPopup('Salt Lake City'),
-    College        	= L.marker([ 30.5, -96.3], {icon: greenIcon}).bindPopup('College Station'),
-    CapeTown        = L.marker([-33.9,  18.5], {icon: greenIcon}).bindPopup('Cape Town'),
-    StPetersburg    = L.marker([ 59.8,  30.3], {icon: greenIcon}).bindPopup('St Petersburg'),
-    Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: greenIcon}).bindPopup('Békéscsaba'),
-    Gyor          	= L.marker([ 47.6,  17.6], {icon: greenIcon}).bindPopup('Győr');
+var Cork     	      = L.marker([ 51.8, -8.4 ], {icon: greenIcon}).bindPopup('Cork, IE'),
+    Reykjavik     	= L.marker([ 64.1, -21.7], {icon: greenIcon}).bindPopup('Reykjavik, IS'),
+    Vestmanna     	= L.marker([ 62.1, -7.1 ], {icon: greenIcon}).bindPopup('Vestmanna, FO'),
+    GranCanaria     = L.marker([ 28.1, -15.4], {icon: greenIcon}).bindPopup('Gran Canaria, ES'),
+    PalmaMallorca 	= L.marker([ 39.5,  2.6 ], {icon: greenIcon}).bindPopup('Palma de Mallorca, ES'),
+    Karlsruhe     	= L.marker([ 49.0,  8.4 ], {icon: purpleIcon}).bindPopup('Karlsruhe, DE'),
+    Oldenburg     	= L.marker([ 53.1,  8.2 ], {icon: purpleIcon}).bindPopup('Oldenburg, DE'),
+    Lisbon        	= L.marker([ 38.7, -9.1 ], {icon: purpleIcon}).bindPopup('Lisbon, PT'),
+    Istanbul      	= L.marker([ 41.0,  28.9], {icon: purpleIcon}).bindPopup('Istanbul, TU'),
+    London        	= L.marker([ 51.5, -0.00], {icon: greenIcon}).bindPopup('London, GB'),
+    Tallinn       	= L.marker([ 59.4,  24.7], {icon: greenIcon}).bindPopup('Tallinn, EE'),
+    Stockholm     	= L.marker([ 59.3,  18.1], {icon: greenIcon}).bindPopup('Stockholm, SE'),
+    SaltLake        = L.marker([ 40.6,-111.8], {icon: greenIcon}).bindPopup('Salt Lake City, US'),
+    College        	= L.marker([ 30.5, -96.3], {icon: greenIcon}).bindPopup('College Station, US'),
+    CapeTown        = L.marker([-33.9,  18.5], {icon: greenIcon}).bindPopup('Cape Town, ZA'),
+    StPetersburg    = L.marker([ 59.8,  30.3], {icon: greenIcon}).bindPopup('St. Petersburg, RU'),
+    Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: greenIcon}).bindPopup('Békéscsaba, HU'),
+    Gyor          	= L.marker([ 47.6,  17.6], {icon: greenIcon}).bindPopup('Győr, HU');
 
 
-var Europe = L.layerGroup([Cork, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg]);
+
+var SynchMeasurements = [
+		[[49.0,  8.4],[53.1,  8.2]],
+		[[49.0,  8.4],[38.7, -9.1]],
+		[[49.0,  8.4],[41.0,  28.9]]
+];
+
+var SemiSynchMeasurements = [
+    [[49.0,  8.4],[46.6,  21.0]],
+		[[49.0,  8.4],[47.6,  17.6]]
+];
+
+
+var SynchMeasurementsLines = L.polyline(SynchMeasurements, {color: 'purple'})
+var SemiSynchMeasurementsLines = L.polyline(SemiSynchMeasurements, {color: 'purple', dashArray: '6'})
+
+var Europe = L.layerGroup([Cork, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
 
 var NorthAmerica = L.layerGroup([SaltLake, College]);
 
 var Africa = L.layerGroup([CapeTown]);
 
-var Synch = L.layerGroup([Karlsruhe, Oldenburg, Lisbon, Istanbul]);
+// Deploy map
 
 var map = L.map('map', {
   'center': [25, -5],
@@ -94,10 +110,29 @@ var map = L.map('map', {
   'layers': [basemap, Europe, NorthAmerica, Africa]
 });
 
+// GeoJSONs
 
-var LayerOfMap = {
-    "<span style='color: black'><b>OpenStreetMap</b></span>": basemap
-};
+L.geoJson(WesternInterconnectionGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(TexasInterconnectionGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(NordicGridGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(RussianGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(BalticGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(NationalGridGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(ContinentalEuropeGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(IrishGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(IcelandGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(FaroeGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(MallorcaGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(GranCanariaGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(SouthAfricaGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+
+
+
+
+// Layers and layer control
+
+var LayerOfMap = { "<span style='color: black'><b>OpenStreetMap</b></span>": basemap };
+
 var overlayMaps = {
     "<span style='color: black'>Europe</span>": Europe,
 		"<span style='color: black'>North America</span>": NorthAmerica,
@@ -109,31 +144,14 @@ L.control.layers(LayerOfMap, overlayMaps).addTo(map);
 
 
 
-var SynchMeasurements = [
-    [[49.0,  8.4],
-		[53.1,  8.2]],
-		[[49.0,  8.4],
-		[38.7, -9.1]],
-		[[49.0,  8.4],
-		[41.0,  28.9]]
-];
-
-var SemiSynchMeasurements = [
-    [[49.0,  8.4],
-		[46.6,  21.0]],
-		[[49.0,  8.4],
-		[47.6,  17.6]]
-];
 
 
-var SynchMeasurementsLines = L.polyline(SynchMeasurements, {color: 'purple'}).addTo(map);
-var SemiSynchMeasurementsLines = L.polyline(SemiSynchMeasurements, {color: 'purple', dashArray: '6'}).addTo(map);
+// General properties
 
 
 SynchMeasurementsLines.bindPopup("Synchronous Measurements between Karlsruhe, Oldenburg, Lisbon, and Istanbul. Békéscsaba and Győr, Hungary, also have recording, but not GPS synchronised.")
+
 SemiSynchMeasurementsLines.bindPopup("Measurements in Békéscsaba and Győr, Hungary, in the same time frame as between Karlsruhe, Oldenburg, Lisbon, and Istanbul.")
-
-
 
 
 // Power-grids
@@ -145,8 +163,6 @@ function style(feature) {
         fillOpacity: 0.4
     };
 }
-
-
 
 var info = L.control();
 
@@ -167,9 +183,7 @@ function highlightFeature(e) {
     info.update(layer.feature.properties);
 }
 
-function resetHighlight(e) {
-    info.update();
-}
+function resetHighlight(e) { info.update(); }
 
 function onEachFeature(feature, layer) {
     layer.on({
@@ -196,18 +210,7 @@ legend.onAdd = function (map) {
 legend.addTo(map);
 
 
-L.geoJson(WesternInterconnectionGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-L.geoJson(TexasInterconnectionGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-L.geoJson(NordicGridGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-L.geoJson(RussianGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-L.geoJson(BalticGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-L.geoJson(NationalGridGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-L.geoJson(ContinentalEuropeGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-L.geoJson(IrishGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-L.geoJson(IcelandGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-L.geoJson(FaroeGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-L.geoJson(MallorcaGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-L.geoJson(GranCanariaGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+
 
 info.addTo(map);
 
