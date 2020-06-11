@@ -45,6 +45,13 @@ classes: wide
 <script type="text/javascript" src="assets/GeoJSON/Russian.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/Baltic.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/NationalGrid.js"></script>
+<script type="text/javascript" src="assets/GeoJSON/ContinentalEurope.js"></script>
+<script type="text/javascript" src="assets/GeoJSON/Irish.js"></script>
+<script type="text/javascript" src="assets/GeoJSON/Iceland.js"></script>
+<script type="text/javascript" src="assets/GeoJSON/Faroe.js"></script>
+<script type="text/javascript" src="assets/GeoJSON/Mallorca.js"></script>
+<script type="text/javascript" src="assets/GeoJSON/GranCanaria.js"></script>
+
 
 <script>
 
@@ -215,8 +222,12 @@ L.geoJson(NordicGridGeo, {style: style, onEachFeature: onEachFeature}).addTo(map
 L.geoJson(RussianGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(BalticGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(NationalGridGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-
-
+L.geoJson(ContinentalEuropeGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(IrishGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(IcelandGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(FaroeGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(MallorcaGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(GranCanariaGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 
 info.addTo(map);
 
