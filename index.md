@@ -10,33 +10,6 @@ classes: wide
 ---
 
 
-<style type="text/css">
-#map {
-	width:100%;
-	height:500px;
-}
-.info {
-    padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;
-    background: white;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    border-radius: 5px;
-}
-.info2 {
-    padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;
-    background: white;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    border-radius: 5px;
-}
-.info h9 {
-    margin: 0 0 5px;
-    color: #000000;
-}
-</style>
-
 <div id="map" class="leafmap"></div>
 
 <script type="text/javascript" src="assets/GeoJSON/WesternInterconnection.js"></script>
@@ -57,13 +30,11 @@ classes: wide
 
 var viirs = 'VIIRS_SNPP_CorrectedReflectance_TrueColor';
 
-var basemap = {
-  'OpenStreetMap': L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+var basemap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     'attribution': '&copy; <a href="https://osmlab.github.io/attribution-mark/copyright/?name={{ site.title }}">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Made with <a href="https://www.naturalearthdata.com/">Natural Earth</a>',
     'minZoom': 2,
     'maxZoom': 19
-  })
-};
+  });
 
 
 
@@ -117,18 +88,25 @@ var Africa = L.layerGroup([CapeTown]);
 
 var Synch = L.layerGroup([Karlsruhe, Oldenburg, Lisbon, Istanbul]);
 
+var map = L.map('map', {
+  'center': [25, -5],
+  'zoom': 2,
+  'layers': [basemap, Europe, NorthAmerica, Africa]
+});
+
+
+var LayerOfMap = {
+    "<span style='color: black'><b>OpenStreetMap</b></span>": basemap
+};
 var overlayMaps = {
     "<span style='color: black'>Europe</span>": Europe,
 		"<span style='color: black'>North America</span>": NorthAmerica,
 		"<span style='color: black'>Africa</span>": Africa
 };
 
+L.control.layers(LayerOfMap, overlayMaps).addTo(map);
 
-var map = L.map('map', {
-  'center': [25, -5],
-  'zoom': 2,
-  'layers': [basemap.OpenStreetMap, Europe, NorthAmerica, Africa]
-});
+
 
 
 var SynchMeasurements = [
@@ -156,7 +134,7 @@ SynchMeasurementsLines.bindPopup("Synchronous Measurements between Karlsruhe, Ol
 SemiSynchMeasurementsLines.bindPopup("Measurements in Békéscsaba and Győr, Hungary, in the same time frame as between Karlsruhe, Oldenburg, Lisbon, and Istanbul.")
 
 
-L.control.layers(basemap, overlayMaps).addTo(map);
+
 
 // Power-grids
 
@@ -208,7 +186,9 @@ legend.onAdd = function (map) {
         grades = [0, 10, 20, 50, 100, 200, 500, 1000],
         labels = [];
 
-    div.innerHTML = '<img id="x" src="assets/js/images/marker-icon-purple.png" width="20" height="20"/>' + '<h9>  Synchronous Measurements </h9>';
+    div.innerHTML = '<img id="x" src="assets/js/images/marker-icon-purple.png" width="20" height="20"/>' + '<h9>  Synchronous Measurements</h9></br>' +
+		'<img id="x" src="assets/js/images/marker-icon-green.png" width="20" height="20"/>' + '<h9>  Standalone Measurements</h9></br>' +
+		'<img id="x" src="assets/js/images/marker-icon.png" width="20" height="20"/>' + '<h9>  TSO Open Data Measurements</h9>';
 
     return div;
 };
