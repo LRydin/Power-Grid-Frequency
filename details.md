@@ -1,7 +1,10 @@
-## A Trial
+## Power-grid frequency database
 
-This page presents an effort to bring power-grid frequency data from around the world, cleaned and processed for research usage.
+This repository is the front-end of the data repository [Power-Grid-Frequency-Data](https://github.com/LRydin/Power-Grid-Frequency-Data). The website [Power-Grid Frequency Database](https://lrydin.github.io/Power-Grid-Frequency/) contains all the relevant information on the content of this database.
 
-The data is collected from the TSO's and is processed to remove dead recordings, spikes, and other naturally assumed bad measurements. The scripts that are used to clean the data are also available, for transparency. See the github page for sourcefiles.
+This database of power-grid frequency is comprised of open data existent across three dimensions:
+ - TSO data: Transmission System's Operator (TSO) recordings made public;
+ - Research projects: Open-data database research projects;
+ - Independent Gatherings: Industrial, private, or personal recordings that were made publicly available.
 
-The German data (1 sec recordings) are obtained from TransnetBW
+The data found here is always free for usage. It is processed, using a set of scripts found Power-Grid [Power-Grid-Frequency-Data](https://github.com/LRydin/Power-Grid-Frequency-Data/scripts), for research usage.
