@@ -19,7 +19,7 @@ The available recordings from Europe are of the following synchronous regions
 Synchronous Area| Location | Provider | Resolution | Date range |
 | --- | --- | --- | --- | --- |
 | Continental Europe | Germany | [TransnetBW](https://www.transnetbw.com/en/energy-market/ancillary-services/control-reserve-demand-activation)|  1 sec | 2011-2019 |
-|   | France |  [RTE](https://clients.rte-france.com/lang/an/visiteurs/vie/vie_frequence.jsp) | 10 sec | 2014-2019 |
+|   | France |  [RTE](https://clients.rte-france.com/lang/an/visiteurs/vie/vie_frequence.jsp) | 10 sec | 2014-2020 |
 | Nordic Grid | Finland | [FinGrid](https://data.fingrid.fi/en/dataset/frequency-historical-data) | 0.1 sec | 2015-2019 |
 | National Grid (GB) | England | [NationalGrid ESO](https://www.nationalgrideso.com/balancing-services/frequency-response-services/historic-frequency-data) | 1 sec | 2015-2019 |
 
@@ -31,7 +31,7 @@ An independent recording by the Hungarian TSO and involved scientist have provid
 # Research Projects
 ## Projects:
 ### Power grid frequency data base
-This is a set of 19 recordings in 12 synchronous regions, spanning from 1 day to ~1 month in length, stored in the Open Science Framework [Power grid frequency data base](https://osf.io/by5hu/) from 2020.
+This is a set of 19 recordings in 12 synchronous regions, spanning from 1 day to ~1 month in length, over 2017 to 2019, stored in the Open Science Framework [Power grid frequency data base](https://osf.io/by5hu/) from 2020.
 
 It contains recordings from Reykjavík, Iceland, Vestmanna, Faroe Islands, Las Palmas de Gran Canaria, Canary Islands, Spain, Palma de Mallorca, Balearic Islands, Spain, Karlsruhe, Germany, Oldenburg, Germany, Istanbul, Turkey, Lisbon, Portugal, Lauris, France, Split, Croatia, Krakau, Poland, Erice, Sicily, Italy, London, United Kingdom, Tallin, Estonia, Stockholm, Sweden, Salt Lake City, Utah, USA, College Station, Texas, USA, Cape Town, South Africa, and St. Petersburg, Russia.
 
