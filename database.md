@@ -22,4 +22,24 @@ The target is to collect, process, and document all available power-grid frequen
 
 {% include_relative /Data/Continental-Europe/Germany/readme.md %}
 
-Hello
+### France
+
+{% include_relative /Data/Continental-Europe/France/readme.md %}
+
+
+## Nordic Grid
+
+### Finland
+
+
+## National Grid (Great Britain)
+
+### Great Britain
+
+
+# Research projects open data
+
+## Power grid frequency data base
+
+
+{% include_relative Data/Research-Projects/Power-grid-frequency-data-base/readme.md %}
