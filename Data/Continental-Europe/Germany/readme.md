@@ -4,7 +4,9 @@ The links are direct downloads. Each is a zipped csv`.csv.zip` file. In [Power-G
 
 | Location of measurements | resolution | precision | date range | Size of database
 |---:|:---:|:---:|:---:|:---:|
-| Baden-Württemberg, Germany | 1 sec | | 07.2011-12.2019 | 1.3 Gb |
+| Baden-Württemberg, Germany | 1 sec | (see below)) | 07.2011-12.2019 | 1.3 Gb |
+
+Precision: 3 decimal cases until 01.2017, no decimal cases from 02.2017. Likely due to a change in the recording PMU machine.
 
 You can download each month separately or each year separately in the links below.
 

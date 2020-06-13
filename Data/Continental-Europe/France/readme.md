@@ -4,7 +4,7 @@ The links are direct downloads. Each is a zipped csv file. In [Power-Grid-Freque
 
 | Location of measurements | resolution | precision | date range | Size of database
 |---:|:---:|:---:|:---:|:---:|
-| France | 10 sec | | 10.2014-05.2020 | 1.3 Gb |
+| France | 10 sec | 1 decimal | 10.2014-05.2020 | 100.7 MB |
 
 You can download each month separately or each year separately in the links below.
 
