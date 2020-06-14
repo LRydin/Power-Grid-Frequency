@@ -13,10 +13,14 @@ toc_icon: "cog"
 
 The target is to collect, process, and document all available power-grid frequency data publicly available and make it research ready.
 
-# Publicly available data
+# Publicly available data from TSOs
+
+The links are direct downloads. Each is a zipped csv `.csv.zip` file. In [Power-Grid-Frequency-Data/](https://github.com/LRydin/Power-Grid-Frequency-Data/tree/master/) and each respective subfolder you can find a plot for each month of the processed data with some details of the data processing and the quality of the actual data.
+
+## Continental Europe
 
 <div class="downloadTablesContainerWrapper">
-    
+
     <div id="downloadTablesContainer">
         <div class="downloadTablesHeader">
             Download Area
@@ -24,7 +28,6 @@ The target is to collect, process, and document all available power-grid frequen
     </div>
 </div>
 
-## Continental Europe
 
 ### Germany
 

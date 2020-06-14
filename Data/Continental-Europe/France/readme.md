@@ -1,6 +1,5 @@
 These recordings are obtained from the [Réseau de Transport d'Électricité (RTE)](https://clients.rte-france.com/lang/an/visiteurs/vie/vie_frequence.jsp). Processed.
 
-The links are direct downloads. Each is a zipped csv file. In [Power-Grid-Frequency-Data/Continental Europe/France](https://github.com/LRydin/Power-Grid-Frequency-Data/tree/master/Continental%20Europe/France) you can find a plot for each month of the processed data with some details of the data processing and the quality of the actual data.
 
 | Location of measurements | resolution | precision |   date range    | Size of database |
 | -----------------------: | :--------: | :-------: | :-------------: | :--------------: |
