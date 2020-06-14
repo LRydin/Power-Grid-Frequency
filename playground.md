@@ -60,7 +60,9 @@ classes: wide
   <canvas id="myChart"></canvas>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+<script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7"></script>
 
 <script>
       timeJsonURL =
@@ -151,10 +153,6 @@ classes: wide
                 display: true,
               },
             },
-            animation: {
-              animateScale: true,
-              animateRotate: true,
-            },
             scales: {
               yAxes: [
                 {
@@ -186,7 +184,20 @@ classes: wide
                   },
                 },
               ],
-            }
+            },
+            plugins: {
+              zoom: {
+                pan: {
+                  enabled: true,
+                  mode: "xy",
+                },
+                zoom: {
+                  enabled: true,
+                  mode: "xy",
+                  sensitivity: 0,
+                },
+              },
+            },
           },
         });
       }
