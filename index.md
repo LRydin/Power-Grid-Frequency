@@ -19,7 +19,9 @@ classes: wide
 <script type="text/javascript" src="assets/GeoJSON/Baltic.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/NationalGrid.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/ContinentalEurope.js"></script>
-<script type="text/javascript" src="assets/GeoJSON/Irish.js"></script>
+<!--
+	<script type="text/javascript" src="assets/GeoJSON/Irish.js"></script>
+-->
 <script type="text/javascript" src="assets/GeoJSON/Iceland.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/Faroe.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/Mallorca.js"></script>
@@ -59,25 +61,97 @@ var purpleIcon = L.icon({
 });
 
 
+var greenpurpleIcon = L.icon({
+    iconUrl: 'assets/js/images/marker-icon-green-purple.png',
+    shadowUrl: 'assets/js/images/marker-shadow.png',
+		iconSize:    [25, 41],
+		iconAnchor:  [12, 41],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+		shadowSize:  [41, 41]
+});
 
-var Cork     	      = L.marker([ 51.8, -8.4 ], {icon: greenIcon}).bindPopup('Cork, IE'),
-    Reykjavik     	= L.marker([ 64.1, -21.7], {icon: greenIcon}).bindPopup('Reykjavik, IS'),
-    Vestmanna     	= L.marker([ 62.1, -7.1 ], {icon: greenIcon}).bindPopup('Vestmanna, FO'),
-    GranCanaria     = L.marker([ 28.1, -15.4], {icon: greenIcon}).bindPopup('Gran Canaria, ES'),
-    PalmaMallorca 	= L.marker([ 39.5,  2.6 ], {icon: greenIcon}).bindPopup('Palma de Mallorca, ES'),
-    Karlsruhe     	= L.marker([ 49.0,  8.4 ], {icon: purpleIcon}).bindPopup('Karlsruhe, DE'),
-    Oldenburg     	= L.marker([ 53.1,  8.2 ], {icon: purpleIcon}).bindPopup('Oldenburg, DE'),
-    Lisbon        	= L.marker([ 38.7, -9.1 ], {icon: purpleIcon}).bindPopup('Lisbon, PT'),
-    Istanbul      	= L.marker([ 41.0,  28.9], {icon: purpleIcon}).bindPopup('Istanbul, TU'),
-    London        	= L.marker([ 51.5, -0.00], {icon: greenIcon}).bindPopup('London, GB'),
-    Tallinn       	= L.marker([ 59.4,  24.7], {icon: greenIcon}).bindPopup('Tallinn, EE'),
-    Stockholm     	= L.marker([ 59.3,  18.1], {icon: greenIcon}).bindPopup('Stockholm, SE'),
-    SaltLake        = L.marker([ 40.6,-111.8], {icon: greenIcon}).bindPopup('Salt Lake City, US'),
-    College        	= L.marker([ 30.5, -96.3], {icon: greenIcon}).bindPopup('College Station, US'),
-    CapeTown        = L.marker([-33.9,  18.5], {icon: greenIcon}).bindPopup('Cape Town, ZA'),
-    StPetersburg    = L.marker([ 59.8,  30.3], {icon: greenIcon}).bindPopup('St. Petersburg, RU'),
-    Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: greenIcon}).bindPopup('Békéscsaba, HU'),
-    Gyor          	= L.marker([ 47.6,  17.6], {icon: greenIcon}).bindPopup('Győr, HU');
+var greenblueIcon = L.icon({
+    iconUrl: 'assets/js/images/marker-icon-green-blue.png',
+    shadowUrl: 'assets/js/images/marker-shadow.png',
+		iconSize:    [25, 41],
+		iconAnchor:  [12, 41],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+		shadowSize:  [41, 41]
+});
+
+var yellowIcon = L.icon({
+    iconUrl: 'assets/js/images/marker-icon-yellow.png',
+    shadowUrl: 'assets/js/images/marker-shadow.png',
+		iconSize:    [25, 41],
+		iconAnchor:  [12, 41],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+		shadowSize:  [41, 41]
+});
+
+var TransnetBW      = L.marker([ 48.777111, 9.180770]),
+    RTE             = L.marker([ 48.856666, 2.3522]);
+
+var Cork     	      = L.marker([ 51.8, -8.4 ], {icon: greenIcon}),
+    Reykjavik     	= L.marker([ 64.1, -21.7], {icon: greenIcon}),
+    Vestmanna     	= L.marker([ 62.1, -7.1 ], {icon: greenIcon}),
+    GranCanaria     = L.marker([ 28.1, -15.4], {icon: greenIcon}),
+    PalmaMallorca 	= L.marker([ 39.5,  2.6 ], {icon: greenIcon}),
+    London        	= L.marker([ 51.5, -0.00], {icon: greenblueIcon}),
+    Lauris        	= L.marker([ 43.746460,  5.313320], {icon: greenIcon}),
+		Split         	= L.marker([ 43.508133,  16.440193], {icon: greenIcon}),
+		Erice         	= L.marker([ 38.036740,  12.583740], {icon: greenIcon}),
+		Krakau        	= L.marker([ 51.205551,  16.211000], {icon: greenIcon}),
+    Tallinn       	= L.marker([ 59.4,  24.7], {icon: greenIcon}),
+    Stockholm     	= L.marker([ 59.3,  18.1], {icon: greenIcon}),
+    SaltLake        = L.marker([ 40.6,-111.8], {icon: greenIcon}),
+    College        	= L.marker([ 30.5, -96.3], {icon: greenIcon}),
+    CapeTown        = L.marker([-33.9,  18.5], {icon: greenIcon}),
+    StPetersburg    = L.marker([ 59.8,  30.3], {icon: greenIcon});
+
+
+var	Karlsruhe     	= L.marker([ 49.0,  8.4 ], {icon: purpleIcon}),
+    Oldenburg     	= L.marker([ 53.1,  8.2 ], {icon: purpleIcon}),
+    Lisbon        	= L.marker([ 38.7, -9.1 ], {icon: greenpurpleIcon}),
+    Istanbul      	= L.marker([ 41.0,  28.9], {icon: purpleIcon});
+
+var Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: yellowIcon}),
+		Gyor          	= L.marker([ 47.6,  17.6], {icon: yellowIcon});
+
+
+// Cork.bindPopup('Cork, IE')
+Reykjavik.bindPopup('Reykjavik, Iceland | Icelandic Grid</br> 2017-10-14 - 2017-10-20 | 5.6 days</br>  <a href="https://osf.io/sxph8/download">link</a> - 15.4 mb' )
+Vestmanna.bindPopup('Vestmanna, Faroe Islands | Faroe Grid</br> 2019-11-03 - 2019-11-10 | 6.5 days</br> <a href="https://osf.io/a7h5b/download">link</a> - 24.5 mb')
+GranCanaria.bindPopup('Las Palmas de Gran Canaria, Spain | Gran Canarian Grid</br> 2018-02-04 - 2018-02-10 | 6.5 days</br> <a href="https://osf.io/wz42b/download">link</a> - 16.2 mb<hr/> 2018-11-25 - 2018-11-26 | 1.5 days </br> <a href="https://osf.io/rukat/download">link</a> - 4.4 mb')
+PalmaMallorca.bindPopup('Palma de Mallorca, Spain | Mallorcan Grid</br> 2019-09-29 - 2019-12-31 | 94.0 days </br> <a href="https://osf.io/2qn9k/download">link</a> - 324 mb')
+London.bindPopup('London, United Kingdom | National Grid</br> 2019-03-04 - 2019-03-07 | 3.5 days </br> <a href="https://osf.io/cfv47/download">link</a> - 9.2 mb<hr/> 2019-11-10 - 2019-12-31 | 51.1 days </br> <a href="https://osf.io/h5ydu/download">link</a> - 135 mb')
+Lauris.bindPopup('Lauris, France | Continental Europe</br> 2019-04-16 - 2019-04-27 | 12.0 days</br> <a href="https://osf.io/hfsrz/download">link</a> - 41.2 mb')
+Split.bindPopup('Split, Croatia | Continental Europe</br> 2019-04-09 - 2019-04-12 | 4.0 days</br> <a href="https://osf.io/r9eh6/download">link</a> - 13.5 mb')
+Erice.bindPopup('Erice, Italy | Continental Europe</br> 2019-07-02 - 2019-07-06 | 5.0 days</br> <a href="https://osf.io/c754b/download">link</a> - 17.1 mb')
+Krakau.bindPopup('Krakau, Poland | Continental Europe</br> 2019-04-04 - 2019-04-07 | 4.0 days</br> <a href="https://osf.io/wq3te/download">link</a> - 13.6 mb')
+Tallinn.bindPopup('Tallinn, Estonia | Baltic Grid</br> 2019-03-25 - 2019-04-17 | 22.9 days</br> <a href="https://osf.io/t5ske/download">link</a> - 79.0 mb')
+Stockholm.bindPopup('Stockholm, Sweden | Nordic Grid</br> 2019-05-06 - 2019-05-13 | 6.7 days</br> <a href="https://osf.io/e2xfb/download">link</a> - 23.1 mb')
+SaltLake.bindPopup('Salt Lake City, USA | Western Interconnection</br> 2019-05-19 - 2019-05-25 | 6.4 days</br> <a href="https://osf.io/8rp4v/download">link</a> - 16.5 mb')
+College.bindPopup('College Station, USA | Texas Interconnection</br> 2019-05-15 - 2019-05-16 | 1.4 days</br> <a href="https://osf.io/t5wxz/download">link</a> - 3.7 mb<hr/>2019-05-20 - 2019-05-23 | 3.7 days</br> <a href="https://osf.io/zngy8/download">link</a> - 9.6 mb')
+CapeTown.bindPopup('Cape Town, South Africa | South African Grid</br> 2017-11-19 - 2017-11-28 | 9.5 days</br> <a href="https://osf.io/gzk7d/download">link</a> - 27.0 mb')
+StPetersburg.bindPopup('St. Petersburg, Russia | Russian Grid</br>2019-04-30 - 2019-05-12 | 13.0 days</br> <a href="https://osf.io/tvsyc/download">link</a> - 44.5 mb')
+
+// Independent Measurements
+Bekescsaba.bindPopup('Békéscsaba, HU </br> 09.07.2019 - 15.07.2019 | 8 days</br> <a href="">link</a> - 218 mb [2 locations simultaneously]')
+Gyor.bindPopup('Győr, HU </br> 09.07.2019 - 15.07.2019 | 8 days</br> <a href="">link</a> - 218 mb [2 locations simultaneously]</br> See synchronous data from Karlsruhe, Oldenburg, Lisbon, Istanbul')
+
+// Sync Measurements
+Karlsruhe.bindPopup('Karlsruhe, Germany | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">link</a> - 218 mb [4 locations synchronously]</br> See synchronous data from Békéscsaba, Győr, Hungary')
+Oldenburg.bindPopup('Oldenburg, Germany | Continental Europe</br> 2019-07-10 - 2019-08-07 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">link</a> - 218 mb [4 locations synchronously]</br> See synchronous data from Békéscsaba, Győr, Hungary')
+Lisbon.bindPopup('Lisbon, Portugal | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">link</a> - 218 mb [4 locations synchronously]</br> See synchronous data from Békéscsaba, Győr, Hungary<hr/> 2018-02-14 - 2018-02-21 | 6.8 days</br> <a href="https://osf.io/5zgwn/download">link</a> - 16.8 mb')
+Istanbul.bindPopup('Istanbul, Turkey | Continental Europe</br> 2019-07-09 - 2019-08-16 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">link</a> - 218 mb [4 locations synchronously]</br> See synchronous data from Békéscsaba, Győr, Hungary')
+
+
+// TSO data
+TransnetBW.bindPopup('Stuttgart, Germany | Continental Europe</br> From July 2011 - March 2020</br> <a href="/database/#continental-europe">link to database</a> - 1.3 gb - 1 sec resolution')
+RTE.bindPopup('Paris, France | Continental Europe</br> From October 2014 - May 2020</br> <a href="/database/#continental-europe">link to database</a> - 1.3 gb - 10 sec resolution')
 
 
 
@@ -96,7 +170,7 @@ var SemiSynchMeasurements = [
 var SynchMeasurementsLines = L.polyline(SynchMeasurements, {color: 'purple'})
 var SemiSynchMeasurementsLines = L.polyline(SemiSynchMeasurements, {color: 'purple', dashArray: '6'})
 
-var Europe = L.layerGroup([Cork, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
+var Europe = L.layerGroup([TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
 
 var NorthAmerica = L.layerGroup([SaltLake, College]);
 
@@ -119,7 +193,7 @@ L.geoJson(RussianGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(BalticGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(NationalGridGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(ContinentalEuropeGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-L.geoJson(IrishGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+// L.geoJson(IrishGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(IcelandGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(FaroeGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(MallorcaGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
@@ -202,7 +276,8 @@ legend.onAdd = function (map) {
 
     div.innerHTML = '<img id="x" src="assets/js/images/marker-icon-purple.png" width="20" height="20"/>' + '<h9>  Synchronous Measurements</h9></br>' +
 		'<img id="x" src="assets/js/images/marker-icon-green.png" width="20" height="20"/>' + '<h9>  Standalone Measurements</h9></br>' +
-		'<img id="x" src="assets/js/images/marker-icon.png" width="20" height="20"/>' + '<h9>  TSO Open Data Measurements</h9>';
+		'<img id="x" src="assets/js/images/marker-icon.png" width="20" height="20"/>' + '<h9>  TSO Open Data Measurements</h9></br>'+
+		'<img id="x" src="assets/js/images/marker-icon-yellow.png" width="20" height="20"/>' + '<h9>  Independent Measurements</h9>';
 
     return div;
 };
