@@ -12,6 +12,10 @@ classes: wide
 #### Playground
 
 <style> 
+      #selectDataSet{
+        color: #252A34;
+      }
+
       #chartContainer {
         border-radius: 5px;
         position: relative;
@@ -44,16 +48,24 @@ classes: wide
 
 </style>
 
+<div>
+      <select name="selectDataSet" id="selectDataSet">
+        <option value="dataset00">Dataset 00</option>
+        <option value="dataset01">Dataset 01</option>
+        <option value="dataset02">Dataset 02</option>
+        <option value="dataset03">Dataset 03</option>
+      </select>
+</div>
 <div id="chartContainer">
   <div id="legendDivContainer">
     <div class="legendDiv">
       <div id="maxFreqLegend" class="freqLegend"></div>
       <div>Max Frequency</div>
       <div id="maxFreq"></div>
-    </div>
-    <div class="legendDiv">
-      <div id="minFreqLegend" class="freqLegend"></div>
-      <div>Min Frequency</div>
+  </div>
+  <div class="legendDiv">
+    <div id="minFreqLegend" class="freqLegend"></div>
+    <div>Min Frequency</div>
       <div id="minFreq"></div>
     </div>
   </div>
@@ -65,9 +77,81 @@ classes: wide
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7"></script>
 
 <script>
-      timeJsonURL =
+      let chart = undefined;
+      window.addEventListener("load", async function (e) {
+        // for initial plot
+        let timeJsonURL = timePath_3;
+        let frequencyJsonURL = frequencyPath_3;
+        makePlot(timeJsonURL, frequencyJsonURL);
+
+        // ------------------
+        var selectDataSet = document.getElementById("selectDataSet");
+        selectDataSet.addEventListener("change", handleDataSetChange);
+
+        async function handleDataSetChange(e) {
+
+          
+          if (e.currentTarget.value === "dataset00") {
+            let timeJsonURL = timePath_0;
+            let frequencyJsonURL = frequencyPath_0;
+            // makePlot(timeJsonURL, frequencyJsonURL);
+
+            updateChart(timeJsonURL, frequencyJsonURL);
+
+          } else if (e.currentTarget.value === "dataset01") {
+            let timeJsonURL = timePath_1;
+            let frequencyJsonURL = frequencyPath_1;
+            // makePlot(timeJsonURL, frequencyJsonURL);
+           
+            updateChart(timeJsonURL, frequencyJsonURL);
+            
+
+          } else if (e.currentTarget.value === "dataset02") {
+            let timeJsonURL = timePath_2;
+            let frequencyJsonURL = frequencyPath_2;
+            // makePlot(timeJsonURL, frequencyJsonURL);
+
+            updateChart(timeJsonURL, frequencyJsonURL);
+            
+
+          } else if (e.currentTarget.value === "dataset03") {
+            let timeJsonURL = timePath_3;
+            let frequencyJsonURL = frequencyPath_3;
+            // makePlot(timeJsonURL, frequencyJsonURL);
+            
+            updateChart(timeJsonURL, frequencyJsonURL);
+            
+
+          }
+
+          // const { xData, yData } = await getXYData(xDataSourcePath, yDataSourcePath);
+        }
+      });
+
+      async function updateChart(timeJsonURL, frequencyJsonURL){
+        const {xData, yData}  = await getXYData(timeJsonURL, frequencyJsonURL);
+            chart.data.xLabels = xData;
+            chart.data.datasets[0].data = yData;
+            updateMaxMin(yData)
+            chart.update()
+      }
+
+      let timePath_0 =
+        "https://raw.githubusercontent.com/galibhassan/power-grid-frequency-data-automation/master/output/time_0.json";
+      let timePath_1 =
+        "https://raw.githubusercontent.com/galibhassan/power-grid-frequency-data-automation/master/output/time_1.json";
+      let timePath_2 =
+        "https://raw.githubusercontent.com/galibhassan/power-grid-frequency-data-automation/master/output/time_2.json";
+      let timePath_3 =
         "https://raw.githubusercontent.com/galibhassan/sample-json/master/sampleDataForPowerGridFrequencyWebsitePlayground/time.json";
-      frequencyJsonURL =
+
+      let frequencyPath_0 =
+        "https://raw.githubusercontent.com/galibhassan/power-grid-frequency-data-automation/master/output/frequency_0.json";
+      let frequencyPath_1 =
+        "https://raw.githubusercontent.com/galibhassan/power-grid-frequency-data-automation/master/output/frequency_1.json";
+      let frequencyPath_2 =
+        "https://raw.githubusercontent.com/galibhassan/power-grid-frequency-data-automation/master/output/frequency_2.json";
+      let frequencyPath_3 =
         "https://raw.githubusercontent.com/galibhassan/sample-json/master/sampleDataForPowerGridFrequencyWebsitePlayground/frequency.json";
 
       const MAX_COLOR = "tomato";
@@ -77,18 +161,17 @@ classes: wide
       document.getElementById("maxFreqLegend").style.backgroundColor = MAX_COLOR;
       document.getElementById("minFreqLegend").style.backgroundColor = MIN_COLOR;
 
-      async function getXYData() {
-        const xData = await fetch(timeJsonURL).then((response) => response.json());
-        const yData = await fetch(frequencyJsonURL).then((response) => response.json());
+      async function getXYData(xDataSourcePath, yDataSourcePath) {
+        const xData = await fetch(xDataSourcePath).then((response) => response.json());
+        const yData = await fetch(yDataSourcePath).then((response) => response.json());
 
         return new Promise((resolve, reject) => {
           resolve({ xData, yData });
         });
       }
 
-      async function makePlot() {
-        const { xData, yData } = await getXYData();
-
+      function updateMaxMin(yData){
+        
         const maxFrequency = yData.reduce(function (a, b) {
           return Math.max(a, b);
         });
@@ -100,10 +183,19 @@ classes: wide
         document.getElementById("maxFreq").innerHTML = maxFrequency;
         document.getElementById("minFreq").innerHTML = minFrequency;
 
+        return {maxFrequency, minFrequency}
+
+      }
+
+      async function makePlot(xDataSourcePath, yDataSourcePath) {
+        const { xData, yData } = await getXYData(xDataSourcePath, yDataSourcePath);
+        const {maxFrequency, minFrequency} = updateMaxMin(yData)
+
         function customRadius(context) {
           let index = context.dataIndex;
           let value = context.dataset.data[index];
           if (value === maxFrequency) {
+            console.log(value)
             return 8;
           } else if (value === minFrequency) {
             return 8;
@@ -125,7 +217,8 @@ classes: wide
         }
 
         var ctx = document.getElementById("myChart").getContext("2d");
-        var chart = new Chart(ctx, {
+        
+        chart = new Chart(ctx, {
           type: "line",
           data: {
             xLabels: xData,
@@ -136,7 +229,7 @@ classes: wide
                 fill: false,
                 borderColor: "#00ADB5",
                 borderWidth: 2,
-                backgroundColor: customBackgroundColor,
+                backgroundColor: "#00ADB5",
                 steppedLine: false,
                 pointStyle: "circ",
                 lineTension: 0,
@@ -149,7 +242,7 @@ classes: wide
             },
             elements: {
               point: {
-                radius: customRadius,
+                radius: 0,
                 display: true,
               },
             },
@@ -201,6 +294,4 @@ classes: wide
           },
         });
       }
-
-      makePlot();
-    </script>
+</script>
