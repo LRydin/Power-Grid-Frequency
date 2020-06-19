@@ -150,15 +150,15 @@ Istanbul.bindPopup('Istanbul, Turkey | Continental Europe</br> 2019-07-09 - 2019
 
 
 // TSO data
-TransnetBW.bindPopup('Stuttgart, Germany | Continental Europe</br> From July 2011 - March 2020</br> <a href="/database/#continental-europe">link to database</a> - 1.3 gb - 1 sec resolution')
-RTE.bindPopup('Paris, France | Continental Europe</br> From October 2014 - May 2020</br> <a href="/database/#continental-europe">link to database</a> - 1.3 gb - 10 sec resolution')
+TransnetBW.bindPopup('Stuttgart, Germany | Continental Europe</br> From July 2011 - March 2020</br> <a href="database/#continental-europe">link to database</a> - 1.3 gb - 1 sec resolution')
+RTE.bindPopup('Paris, France | Continental Europe</br> From October 2014 - May 2020</br> <a href="database/#continental-europe">link to database</a> - 100.7 mb - 10 sec resolution')
 
 
 
 var SynchMeasurements = [
 		[[49.0,  8.4],[53.1,  8.2]],
 		[[49.0,  8.4],[38.7, -9.1]],
-		[[49.0,  8.4],[41.0,  28.9]]
+		[[49.0,  8.4],[41.0, 28.9]]
 ];
 
 var SemiSynchMeasurements = [

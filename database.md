@@ -17,6 +17,19 @@ The target is to collect, process, and document all available power-grid frequen
 
 The links are direct downloads. Each is a zipped csv `.csv.zip` file. In [Power-Grid-Frequency-Data/](https://github.com/LRydin/Power-Grid-Frequency-Data/tree/master/) and each respective subfolder you can find a plot for each month of the processed data with some details of the data processing and the quality of the actual data.
 
+*Data structure*  
+
+The data is structure in two columns: first column is a data-time format, e.g. `2017-01-01 00:00:00`. The second column is the frequency deviation from the reference in mHz, e.g. `44.006`.
+
+To read the data directly in `python`, use `pandas` as
+
+```python
+import pandas as pd
+df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
+```
+
+`pandas` is smart enough to unzip the `.csv` and read it.
+
 ## Continental Europe
 
 <div class="downloadTablesContainerWrapper">
