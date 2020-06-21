@@ -1,6 +1,6 @@
 ## Power-grid frequency database
 
-Welcome to the website of the Power-grid frequency database. Here you can find recordings of power-grid freuquency from across the globe.
+Welcome to the website of the Power-grid frequency database. Here you can find recordings of power-grid frequency from across the globe.
 
 This website is the front-end of the data repository in [Open Science Framework](https://osf.io/m43tg/). The website [Power-Grid frequency database](https://lrydin.github.io/Power-Grid-Frequency/) contains all the relevant information on the content of this database.
 
