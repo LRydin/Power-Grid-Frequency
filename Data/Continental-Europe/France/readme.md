@@ -2,7 +2,7 @@ These recordings are obtained from the [Réseau de Transport d'Électricité (RT
 
 
 | Location of measurements | resolution | precision |   date range    | Size of database |
-| -----------------------: | :--------: | :-------: | :-------------: | :--------------: |
-|                   France |   10 sec   | 1 decimal | 10.2014-05.2020 |     100.7 MB     |
+| :----------------------: | :--------: | :-------: | :-------------: | :--------------: |
+|            Paris, France |   10 sec   | 1 decimal | 10.2014-05.2020 |     100.7 MB     |
 
 You can download each month separately from the <a href="#downloadTablesContainer">download area</a> above.

@@ -92,7 +92,8 @@ var yellowIcon = L.icon({
 });
 
 var TransnetBW      = L.marker([ 48.777111, 9.180770]),
-    RTE             = L.marker([ 48.856666, 2.3522]);
+    RTE             = L.marker([ 48.856666, 2.3522]),
+		FinGrid         = L.marker([ 60.169857, 24.938379]);
 
 var Cork     	      = L.marker([ 51.8, -8.4 ], {icon: greenIcon}),
     Reykjavik     	= L.marker([ 64.1, -21.7], {icon: greenIcon}),
@@ -126,7 +127,7 @@ Reykjavik.bindPopup('Reykjavik, Iceland | Icelandic Grid</br> 2017-10-14 - 2017-
 Vestmanna.bindPopup('Vestmanna, Faroe Islands | Faroe Grid</br> 2019-11-03 - 2019-11-10 | 6.5 days</br> <a href="https://osf.io/a7h5b/download">link</a> - 24.5 mb')
 GranCanaria.bindPopup('Las Palmas de Gran Canaria, Spain | Gran Canarian Grid</br> 2018-02-04 - 2018-02-10 | 6.5 days</br> <a href="https://osf.io/wz42b/download">link</a> - 16.2 mb<hr/> 2018-11-25 - 2018-11-26 | 1.5 days </br> <a href="https://osf.io/rukat/download">link</a> - 4.4 mb')
 PalmaMallorca.bindPopup('Palma de Mallorca, Spain | Mallorcan Grid</br> 2019-09-29 - 2019-12-31 | 94.0 days </br> <a href="https://osf.io/2qn9k/download">link</a> - 324 mb')
-London.bindPopup('London, United Kingdom | National Grid</br> 2019-03-04 - 2019-03-07 | 3.5 days </br> <a href="https://osf.io/cfv47/download">link</a> - 9.2 mb<hr/> 2019-11-10 - 2019-12-31 | 51.1 days </br> <a href="https://osf.io/h5ydu/download">link</a> - 135 mb')
+London.bindPopup('London, United Kingdom | National Grid</br> 2019-03-04 - 2019-03-07 | 3.5 days </br> <a href="https://osf.io/cfv47/download">link</a> - 9.2 mb<hr/> 2019-11-10 - 2019-12-31 | 51.1 days </br> <a href="https://osf.io/h5ydu/download">link</a> - 135 mb<hr/>From January 2014 - December 2019</br> <a href="database/#great-britain">link to database</a> - 1.3 gb - 1 sec resolution')
 Lauris.bindPopup('Lauris, France | Continental Europe</br> 2019-04-16 - 2019-04-27 | 12.0 days</br> <a href="https://osf.io/hfsrz/download">link</a> - 41.2 mb')
 Split.bindPopup('Split, Croatia | Continental Europe</br> 2019-04-09 - 2019-04-12 | 4.0 days</br> <a href="https://osf.io/r9eh6/download">link</a> - 13.5 mb')
 Erice.bindPopup('Erice, Italy | Continental Europe</br> 2019-07-02 - 2019-07-06 | 5.0 days</br> <a href="https://osf.io/c754b/download">link</a> - 17.1 mb')
@@ -152,7 +153,7 @@ Istanbul.bindPopup('Istanbul, Turkey | Continental Europe</br> 2019-07-09 - 2019
 // TSO data
 TransnetBW.bindPopup('Stuttgart, Germany | Continental Europe</br> From July 2011 - March 2020</br> <a href="database/#continental-europe">link to database</a> - 1.3 gb - 1 sec resolution')
 RTE.bindPopup('Paris, France | Continental Europe</br> From October 2014 - May 2020</br> <a href="database/#continental-europe">link to database</a> - 100.7 mb - 10 sec resolution')
-
+FinGrid.bindPopup('Helsinki, Finland | Nordic Grid </br> From January 2015 - December 2019</br> <a href="database/#finland">link to database</a> - ### gb - 0.1 sec resolution')
 
 
 var SynchMeasurements = [
@@ -170,7 +171,7 @@ var SemiSynchMeasurements = [
 var SynchMeasurementsLines = L.polyline(SynchMeasurements, {color: 'purple'})
 var SemiSynchMeasurementsLines = L.polyline(SemiSynchMeasurements, {color: 'purple', dashArray: '6'})
 
-var Europe = L.layerGroup([TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
+var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
 
 var NorthAmerica = L.layerGroup([SaltLake, College]);
 
