@@ -60,12 +60,12 @@ classes: wide
   <div id="legendDivContainer">
     <div class="legendDiv">
       <div id="maxFreqLegend" class="freqLegend"></div>
-      <div>Max Frequency</div>
+      <div>Max</div>
       <div id="maxFreq"></div>
   </div>
   <div class="legendDiv">
     <div id="minFreqLegend" class="freqLegend"></div>
-    <div>Min Frequency</div>
+    <div>Min</div>
       <div id="minFreq"></div>
     </div>
   </div>
@@ -224,7 +224,7 @@ classes: wide
             xLabels: xData,
             datasets: [
               {
-                label: "Frequency in Hz",
+                label: "Frequency in mHz",
                 data: yData,
                 fill: false,
                 borderColor: "#00ADB5",
@@ -251,7 +251,7 @@ classes: wide
                 {
                   scaleLabel: {
                     display: true,
-                    labelString: "Frequency (Hz)",
+                    labelString: "Frequency (mHz)",
                     fontSize: 20,
                   },
                 },

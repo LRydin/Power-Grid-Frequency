@@ -17,9 +17,9 @@ The target is to collect, process, and document all available power-grid frequen
 
 The links are direct downloads. Each is a zipped csv `.csv.zip` file. In [Power-Grid-Frequency-Data/](https://github.com/LRydin/Power-Grid-Frequency-Data/tree/master/) and each respective subfolder you can find a plot for each month of the processed data with some details of the data processing and the quality of the actual data.
 
-*Data structure*  
+_Data structure_
 
-The data is structure in two columns: first column is a data-time format, e.g. `2017-01-01 00:00:00`. The second column is the frequency deviation from the reference in mHz, e.g. `44.006`.
+The data is structured in two columns: first column is a data-time format, e.g. `2017-01-01 00:00:00`. The second column is the frequency deviation from the reference in mHz, e.g. `44.006`.
 
 To read the data directly in `python`, use `pandas` as
 
@@ -30,17 +30,15 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 
 `pandas` is smart enough to unzip the `.csv` and read it.
 
-## Continental Europe
-
 <div class="downloadTablesContainerWrapper">
-
-    <div id="downloadTablesContainer">
+      <div id="downloadTablesContainer">
         <div class="downloadTablesHeader">
-            Download Area
+          Download Area
         </div>
-    </div>
+      </div>
 </div>
 
+## Continental Europe
 
 ### Germany
 
@@ -65,73 +63,95 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 {% include_relative Data/Research-Projects/Power-grid-frequency-data-base/readme.md %}
 
 <style>
-
-    .downloadTablesContainerWrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      padding: 20px;
-    }
-    .downloadTablesHeader{
+      .downloadTablesContainerWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 20px;
+      }
+      .downloadTablesHeader {
         background-color: #1e232c;
         border-radius: 5px;
         width: auto;
         text-align: center;
         padding: 10px;
-    }
+      }
 
-    #downloadTablesContainer{
-      padding: 20px;
-      box-shadow: 1px 1px 15px 1px rgba(0,0,0,0.4);
-      border-radius: 5px;
-      transition: width 2s, height 4s;
-    }
+      #downloadTablesContainer {
+        padding: 20px;
+        box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+        transition: width 2s, height 4s;
+      }
 
-    .tab-link {
-      display: inline-block;
-      padding: 10px;
-      cursor: pointer;
-      background-color: rgb(68, 75, 88);
-      border-radius: 5px;
-      border-top-right-radius: 20px;
-      margin: 2px;
-      color: white;
-    }
-    .tab-content {
-      display: none;
-    }
-    .tab-active {
-      background-color: #00acb4;
-    }
-    .tab-not-active {
-      background-color: rgb(68, 75, 88);
-    }
-
+      .tab-link {
+        display: inline-block;
+        padding: 10px;
+        cursor: pointer;
+        background-color: rgb(68, 75, 88);
+        border-radius: 5px;
+        border-top-right-radius: 20px;
+        margin: 2px;
+        color: white;
+      }
+      .tab-content {
+        display: none;
+      }
+      .tab-active {
+        background-color: #00acb4;
+      }
+      .tab-not-active {
+        background-color: rgb(68, 75, 88);
+      }
+      .realm {
+        margin-top: 20px;
+        border: 1px solid #1D2129;
+        border-radius: 3px;
+        transition: border 1.5s;
+      }
+      .realm:hover{
+        border: 1px solid #00ABB3;
+      }
+      .realm-header {
+        background: #2f3a45;
+        padding: 10px;
+        border-radius: 3px;
+        box-shadow: 1px 1px 15px 1px rgba(0,0,0,0.3);
+        /* border-top: 1px solid gray; */
+      }
+      .download-table{
+        padding: 15px
+      }
 </style>
 
 <script>
- var sampleJsonEndpointURL = "https://raw.githubusercontent.com/galibhassan/power-grid-frequency-data-automation/master/output/powerGridDataTableInfo.json";
+      var sampleJsonEndpointURL = "https://raw.githubusercontent.com/galibhassan/power-grid-frequency-data-automation/automationStandalone/output/tableJsonOsf.json";
 
-fetch(sampleJsonEndpointURL)
-.then((response) => response.json())
-.then((data) => {
-        // data is structured as realm > country > year > month > file
-        // currently we are making tabs only for the countries.
-        // [TO DO]: Make tabs for the realms (i.e. Europe, US, etc.)
-        getTabsfromJson(data[0].children, "downloadTablesContainer");
-});
-
-
+      fetch(sampleJsonEndpointURL)
+        .then((response) => response.json())
+        .then((data) => {
+          // data is structured as realm > country > year > month > file
+          data.forEach((realm) => {
+            getTabsfromJson(realm.name, realm.children, "downloadTablesContainer");
+          });
+        });
 </script>
 
 <script>
-      function getTabsfromJson(jsonData, tableContainerId) {
+      function getTabsfromJson(headerString, jsonData, tableContainerId) {
         var tabLinks = document.createElement("ul");
         var tabContents = document.createElement("div");
 
         tabLinks.setAttribute("id", "tabList");
+        var tableContainer = document.getElementById(tableContainerId);
+        var realm = document.createElement("div");
+        realm.classList.add("realm");
+        var realmHeader = document.createElement("div");
+        realmHeader.classList.add("realm-header");
+        realmHeader.innerHTML = headerString;
+        realm.appendChild(realmHeader);
 
         jsonData.forEach((entry, index) => {
           // creating tab-links links
@@ -149,9 +169,10 @@ fetch(sampleJsonEndpointURL)
           tabLinks.appendChild(currentTabLink);
           tabContents.appendChild(currentTabContent);
 
-          var tableContainer = document.getElementById(tableContainerId);
-          tableContainer.appendChild(tabLinks);
-          tableContainer.appendChild(tabContents);
+          realm.appendChild(tabLinks);
+          realm.appendChild(tabContents);
+
+          tableContainer.appendChild(realm);
 
           // initial tab visibility
           tabContents.children[0].style.display = "block";
@@ -185,6 +206,7 @@ fetch(sampleJsonEndpointURL)
       function getTable(index, jsonData) {
         // making table
         var currentTable = document.createElement("table");
+        currentTable.classList.add('download-table')
         var currentTBody = document.createElement("tbody");
 
         var years = jsonData[index].children;
@@ -232,19 +254,19 @@ fetch(sampleJsonEndpointURL)
       }
 
       function getMonthName(monthString) {
-        if (monthString === '01') return "Jan";
-        else if (monthString === '02') return "Feb";
-        else if (monthString === '03') return "Mar";
-        else if (monthString === '04') return "Apr";
-        else if (monthString === '05') return "May";
-        else if (monthString === '06') return "Jun";
-        else if (monthString === '07') return "Jul";
-        else if (monthString === '08') return "Aug";
-        else if (monthString === '09') return "Sep";
-        else if (monthString === '10') return "Oct";
-        else if (monthString === '11') return "Nov";
-        else if (monthString === '12') return "Dec";
+        if (monthString === "01") return "Jan";
+        else if (monthString === "02") return "Feb";
+        else if (monthString === "03") return "Mar";
+        else if (monthString === "04") return "Apr";
+        else if (monthString === "05") return "May";
+        else if (monthString === "06") return "Jun";
+        else if (monthString === "07") return "Jul";
+        else if (monthString === "08") return "Aug";
+        else if (monthString === "09") return "Sep";
+        else if (monthString === "10") return "Oct";
+        else if (monthString === "11") return "Nov";
+        else if (monthString === "12") return "Dec";
         else return monthString;
       }
 
-    </script>
+</script>
