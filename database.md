@@ -52,15 +52,27 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 
 ### Finland
 
-## National Grid (Great Britain)
+{% include_relative /Data/Nordic-Grid/Finland/readme.md %}
+
+## National Grid
 
 ### Great Britain
+
+{% include_relative /Data/National-Grid/Great-Britain/readme.md %}
 
 # Research projects open data
 
 ## Power grid frequency data base
 
-{% include_relative Data/Research-Projects/Power-grid-frequency-data-base/readme.md %}
+{% include_relative /Data/Research-Projects/Power-grid-frequency-data-base/readme.md %}
+
+# Independent measurements
+
+## Continental Europe
+
+### Hungary
+
+{% include_relative /Data/Independent-Measurements/Hungary/readme.md %}
 
 <style>
       .downloadTablesContainerWrapper {

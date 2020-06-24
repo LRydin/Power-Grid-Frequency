@@ -11,7 +11,7 @@ classes: wide
 
 #### Playground
 
-<style> 
+<style>
       #selectDataSet{
         color: #252A34;
       }
@@ -37,7 +37,7 @@ classes: wide
         display: flex;
         width: 300px;
         justify-content: space-around;
-        
+
       }
       .freqLegend {
         width: 10px;
@@ -90,7 +90,7 @@ classes: wide
 
         async function handleDataSetChange(e) {
 
-          
+
           if (e.currentTarget.value === "dataset00") {
             let timeJsonURL = timePath_0;
             let frequencyJsonURL = frequencyPath_0;
@@ -102,9 +102,9 @@ classes: wide
             let timeJsonURL = timePath_1;
             let frequencyJsonURL = frequencyPath_1;
             // makePlot(timeJsonURL, frequencyJsonURL);
-           
+
             updateChart(timeJsonURL, frequencyJsonURL);
-            
+
 
           } else if (e.currentTarget.value === "dataset02") {
             let timeJsonURL = timePath_2;
@@ -112,15 +112,15 @@ classes: wide
             // makePlot(timeJsonURL, frequencyJsonURL);
 
             updateChart(timeJsonURL, frequencyJsonURL);
-            
+
 
           } else if (e.currentTarget.value === "dataset03") {
             let timeJsonURL = timePath_3;
             let frequencyJsonURL = frequencyPath_3;
             // makePlot(timeJsonURL, frequencyJsonURL);
-            
+
             updateChart(timeJsonURL, frequencyJsonURL);
-            
+
 
           }
 
@@ -171,7 +171,7 @@ classes: wide
       }
 
       function updateMaxMin(yData){
-        
+
         const maxFrequency = yData.reduce(function (a, b) {
           return Math.max(a, b);
         });
@@ -217,14 +217,14 @@ classes: wide
         }
 
         var ctx = document.getElementById("myChart").getContext("2d");
-        
+
         chart = new Chart(ctx, {
           type: "line",
           data: {
             xLabels: xData,
             datasets: [
               {
-                label: "Frequency in mHz",
+                label: "Frequency deviation [mHz]",
                 data: yData,
                 fill: false,
                 borderColor: "#00ADB5",
@@ -251,7 +251,7 @@ classes: wide
                 {
                   scaleLabel: {
                     display: true,
-                    labelString: "Frequency (mHz)",
+                    labelString: "Frequency deviation [mHz]",
                     fontSize: 20,
                   },
                 },

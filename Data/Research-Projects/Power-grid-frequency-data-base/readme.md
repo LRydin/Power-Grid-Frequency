@@ -38,3 +38,6 @@ Single link with the four recordings: [OSF link](https://osf.io/p5xyr/download) 
 
 
 The links are direct links to the `.csv` files from the Open Science Framework repository [Power grid frequency data base](https://osf.io/by5hu/).
+
+**Licensing**: The authors request the associated [<a href="https://arxiv.org/abs/2006.01771" class="Blau">preprint</a>] be cited:
+>*Power grid frequency data base*, R. Jumar, H. Maaß, B. Schäfer, L. Rydin Gorjão, V. Hagenmeyer, arXiv:2006.01771, 2020
