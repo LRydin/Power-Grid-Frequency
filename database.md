@@ -139,7 +139,8 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 </style>
 
 <script>
-      var sampleJsonEndpointURL = "https://raw.githubusercontent.com/galibhassan/power-grid-frequency-data-automation/automationStandalone/output/tableJsonOsf.json";
+      // var sampleJsonEndpointURL = "https://raw.githubusercontent.com/galibhassan/power-grid-frequency-data-automation/automationStandalone/output/tableJsonOsf.json";
+      var sampleJsonEndpointURL = '../json/tableJsonOsf.json'
 
       fetch(sampleJsonEndpointURL)
         .then((response) => response.json())
@@ -218,7 +219,6 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
       function getTable(index, jsonData) {
         // making table
         var currentTable = document.createElement("table");
-        currentTable.classList.add('download-table')
         var currentTBody = document.createElement("tbody");
 
         var years = jsonData[index].children;
@@ -233,13 +233,19 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
           .forEach((year) => {
             let currentTR = document.createElement("tr");
             let currentTD = document.createElement("td");
+
             currentTD.innerHTML = year.name;
             currentTR.appendChild(currentTD);
 
             var months = year.children;
+            // var months12 =
             months.forEach((month, monthIndex) => {
               let currentTD = document.createElement("td");
-              currentTD.appendChild(getDownloadLinkForMonth(month));
+              if (month.children.length === 0) {
+                currentTD.innerHTML = getMonthName(month.name);
+              } else {
+                currentTD.appendChild(getDownloadLinkForMonth(month));
+              }
               currentTR.appendChild(currentTD);
             });
 
@@ -280,5 +286,4 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
         else if (monthString === "12") return "Dec";
         else return monthString;
       }
-
 </script>
