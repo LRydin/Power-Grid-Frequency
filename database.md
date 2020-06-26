@@ -30,23 +30,23 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 
 `pandas` is smart enough to unzip the `.csv` and read it.
 
-<div class="downloadTablesContainerWrapper">
-      <div id="downloadTablesContainer">
-        <div class="downloadTablesHeader">
-          Download Area
-        </div>
-      </div>
-</div>
-
 ## Continental Europe
 
 ### Germany
 
 {% include_relative /Data/Continental-Europe/Germany/readme.md %}
 
+<div class="downloadTablesContainerWrapper"> 
+  <div id='table-Germany' class="downloadTablesContainer realm"></div>
+</div>
+
 ### France
 
 {% include_relative /Data/Continental-Europe/France/readme.md %}
+
+<div class="downloadTablesContainerWrapper"> 
+  <div id='table-France' class="downloadTablesContainer realm"></div>
+</div>
 
 ## Nordic Grid
 
@@ -54,11 +54,19 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 
 {% include_relative /Data/Nordic-Grid/Finland/readme.md %}
 
+<div class="downloadTablesContainerWrapper"> 
+  <div id='table-Finland' class="downloadTablesContainer realm"></div>
+</div>
+
 ## National Grid
 
 ### Great Britain
 
 {% include_relative /Data/National-Grid/Great-Britain/readme.md %}
+
+<div class="downloadTablesContainerWrapper"> 
+  <div id='table-GreatBritain' class="downloadTablesContainer realm"></div>
+</div>
 
 # Research projects open data
 
@@ -92,6 +100,12 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
       }
 
       #downloadTablesContainer {
+        padding: 20px;
+        box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+        transition: width 2s, height 4s;
+      }
+      .downloadTablesContainer {
         padding: 20px;
         box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.4);
         border-radius: 5px;
@@ -131,6 +145,7 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
         padding: 10px;
         border-radius: 3px;
         box-shadow: 1px 1px 15px 1px rgba(0,0,0,0.3);
+        text-align: center;
         /* border-top: 1px solid gray; */
       }
       .download-table{
@@ -139,15 +154,31 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 </style>
 
 <script>
-      var sampleJsonEndpointURL = "https://raw.githubusercontent.com/galibhassan/power-grid-frequency-data-automation/automationStandalone/output/tableJsonOsf.json";
+      var tableJsonOsfUrl = '../automation/output/tableJsonOsf.json'
 
-      fetch(sampleJsonEndpointURL)
+      // table divs in DOM
+      tableGermany = document.getElementById("table-Germany")
+      tableFrance = document.getElementById("table-France")
+      tableFinland = document.getElementById("table-Finland")
+      tableGreatBritain = document.getElementById("table-GreatBritain")
+
+      fetch(tableJsonOsfUrl)
         .then((response) => response.json())
         .then((data) => {
-          // data is structured as realm > country > year > month > file
-          data.forEach((realm) => {
-            getTabsfromJson(realm.name, realm.children, "downloadTablesContainer");
-          });
+            continentalEuropeInfo = data[0]
+            nordicGridInfo = data[1]
+            nationalGridInfo = data[2]
+            independentMeasurementsInfo = data[4]
+            
+            franceInfo = continentalEuropeInfo["children"][0]
+            germanyInfo = continentalEuropeInfo["children"][1]
+            finlandInfo = nordicGridInfo["children"][0]
+            greatBritainInfo = nationalGridInfo["children"][0]
+
+            tableGermany.appendChild(getTableSingle(germanyInfo));
+            tableFrance.appendChild(getTableSingle(franceInfo));
+            tableFinland.appendChild(getTableSingle(finlandInfo));
+            tableGreatBritain.appendChild(getTableSingle(greatBritainInfo));
         });
 </script>
 
@@ -218,7 +249,6 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
       function getTable(index, jsonData) {
         // making table
         var currentTable = document.createElement("table");
-        currentTable.classList.add('download-table')
         var currentTBody = document.createElement("tbody");
 
         var years = jsonData[index].children;
@@ -233,13 +263,19 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
           .forEach((year) => {
             let currentTR = document.createElement("tr");
             let currentTD = document.createElement("td");
+
             currentTD.innerHTML = year.name;
             currentTR.appendChild(currentTD);
 
             var months = year.children;
+            // var months12 =
             months.forEach((month, monthIndex) => {
               let currentTD = document.createElement("td");
-              currentTD.appendChild(getDownloadLinkForMonth(month));
+              if (month.children.length === 0) {
+                currentTD.innerHTML = getMonthName(month.name);
+              } else {
+                currentTD.appendChild(getDownloadLinkForMonth(month));
+              }
               currentTR.appendChild(currentTD);
             });
 
@@ -250,6 +286,58 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 
         return currentTable;
       }
+
+      
+      function getTableSingle(countryInfo) {
+        // making table
+        var tableWrapper = document.createElement("div")
+        var tableHeader = document.createElement("div")
+        tableHeader.innerHTML = countryInfo.name
+        tableHeader.classList.add('realm-header')
+
+        var currentTable = document.createElement("table");
+        var currentTBody = document.createElement("tbody");
+
+        var years = countryInfo.children;
+        if (years.length === 0) {
+          var noDataDiv = document.createElement("div");
+          noDataDiv.innerHTML = "Data not yet available.";
+          return noDataDiv;
+        }
+        years
+          .slice()
+          .reverse()
+          .forEach((year) => {
+            let currentTR = document.createElement("tr");
+            let currentTD = document.createElement("td");
+
+            currentTD.innerHTML = year.name;
+            currentTR.appendChild(currentTD);
+
+            var months = year.children;
+            // var months12 =
+            months.forEach((month, monthIndex) => {
+              let currentTD = document.createElement("td");
+              if (month.children.length === 0) {
+                currentTD.innerHTML = getMonthName(month.name);
+              } else {
+                currentTD.appendChild(getDownloadLinkForMonth(month));
+              }
+              currentTR.appendChild(currentTD);
+            });
+
+            currentTBody.appendChild(currentTR);
+          });
+
+        currentTable.appendChild(currentTBody);
+
+        tableWrapper.appendChild(tableHeader)
+        tableWrapper.appendChild(currentTable)
+
+
+        return tableWrapper;
+      }
+
 
       function getDownloadLinkForMonth(month) {
         var link = document.createElement("a");
@@ -280,5 +368,4 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
         else if (monthString === "12") return "Dec";
         else return monthString;
       }
-
 </script>
