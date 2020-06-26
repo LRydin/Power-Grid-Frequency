@@ -9,7 +9,7 @@ This database of power-grid frequency is comprised of open data existent across 
  - Research projects: Open-data database research projects;
  - Independent Gatherings: Industrial, private, or personal recordings that were made publicly available.
 
-The data found here is always free for usage. For each dataset you should check their licensing, to ensure no copyright violations and correct referencing. The data from the *TSOs* and *Independent Gatherings* is processed, using a set of scripts found Power-Grid [Power-Grid Frequency](https://github.com/LRydin/Power-Grid-Frequency/scripts). The data from other research projects is simply linked here, thus not processed, added to the map, and structured into the [database](/database). If you wish to add your data, contact us or open an issue on the Github repository [Power-Grid Frequency](https://github.com/LRydin/Power-Grid-Frequency).
+The data found here is always free for usage. For each dataset you should check their licensing, to ensure no copyright violations and correct referencing. The data from the *TSOs* and *Independent Gatherings* is processed, using a set of scripts found in [scripts](https://github.com/LRydin/Power-Grid-Frequency/scripts). The data from other research projects is simply linked here, thus not processed, added to the map, and structured into the [database](/database). If you wish to add your data, contact us or open an issue on the Github repository [Power-Grid Frequency](https://github.com/LRydin/Power-Grid-Frequency).
 
 This is not a static database, we need everyone to contribute their data to ensure transparent and clean science. The data we processed and made available is hosted on the [Open Science Framework](https://osf.io/).
 
