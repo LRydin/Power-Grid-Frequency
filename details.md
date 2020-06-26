@@ -13,6 +13,6 @@ The data found here is always free for usage. For each dataset you should check 
 
 This is not a static database, we need everyone to contribute their data to ensure transparent and clean science. The data we processed and made available is hosted on the [Open Science Framework](https://osf.io/).
 
-In the [Playground](/playground) tab you can visualise snippets of the data available Here. The [Publications](/publications) tabs list a set of publications that is based on the study of power-grid frequency. Some of the data of these publications is found here. The [Project](/project) section details the target of this project, the people involved, our view on open data, and our funding sources.
+In the [Playground](/playground) tab you can visualise snippets of the data available Here. The [Publications](/publications) tab list a set of publications that is based on the study of power-grid frequency. Some of the data of these publications is found here. The [Project](/project) section details the target of this project, the people involved, our view on open data, and our funding sources.
 
 <img src="assets/img/github.png" width="200" height="200" border="0" class="center" /><img src="assets/img/osf.png" width="200" height="200" border="0" class="center" />

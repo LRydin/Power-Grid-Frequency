@@ -284,16 +284,7 @@ legend.onAdd = function (map) {
 };
 
 legend.addTo(map);
-
-
-
-
 info.addTo(map);
-
-
-
-
-
 
 </script>
 
