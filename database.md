@@ -34,39 +34,45 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 
 ### Germany
 
-{% include_relative /Data/Continental-Europe/Germany/readme.md %}
-
-<div class="downloadTablesContainerWrapper"> 
+<div class="downloadTablesContainerWrapper">
   <div id='table-Germany' class="downloadTablesContainer realm"></div>
 </div>
 
+{% include_relative /Data/Continental-Europe/Germany/readme.md %}
+
+
+
 ### France
+
+<div class="downloadTablesContainerWrapper">
+  <div id='table-France' class="downloadTablesContainer realm"></div>
+</div>
 
 {% include_relative /Data/Continental-Europe/France/readme.md %}
 
-<div class="downloadTablesContainerWrapper"> 
-  <div id='table-France' class="downloadTablesContainer realm"></div>
-</div>
+
 
 ## Nordic Grid
 
 ### Finland
 
-{% include_relative /Data/Nordic-Grid/Finland/readme.md %}
-
-<div class="downloadTablesContainerWrapper"> 
+<div class="downloadTablesContainerWrapper">
   <div id='table-Finland' class="downloadTablesContainer realm"></div>
 </div>
+
+{% include_relative /Data/Nordic-Grid/Finland/readme.md %}
+
+
 
 ## National Grid
 
 ### Great Britain
 
-{% include_relative /Data/National-Grid/Great-Britain/readme.md %}
-
-<div class="downloadTablesContainerWrapper"> 
+<div class="downloadTablesContainerWrapper">
   <div id='table-GreatBritain' class="downloadTablesContainer realm"></div>
 </div>
+
+{% include_relative /Data/National-Grid/Great-Britain/readme.md %}
 
 # Research projects open data
 
@@ -169,7 +175,7 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
             nordicGridInfo = data[1]
             nationalGridInfo = data[2]
             independentMeasurementsInfo = data[4]
-            
+
             franceInfo = continentalEuropeInfo["children"][0]
             germanyInfo = continentalEuropeInfo["children"][1]
             finlandInfo = nordicGridInfo["children"][0]
@@ -287,7 +293,7 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
         return currentTable;
       }
 
-      
+
       function getTableSingle(countryInfo) {
         // making table
         var tableWrapper = document.createElement("div")

@@ -141,13 +141,13 @@ StPetersburg.bindPopup('<b>St. Petersburg</b>, Russia | Russian Grid</br>2019-04
 
 // Independent Measurements
 Bekescsaba.bindPopup('<b>Békéscsaba</b>, Hungary | Continental Europe</br> 09.07.2019 - 15.07.2019 | 8 days</br> <a href="https://osf.io/pywx7/download">download</a> - 19.2 mb')
-Gyor.bindPopup('<b>Győr</b>, Hungary | Continental Europe</br> 09.07.2019 - 15.07.2019 | 7 days</br> <a href="https://osf.io/u9ekr/download">download</a> - 18.8 mb</br> See synchronous data from Karlsruhe, Oldenburg, Lisbon, Istanbul')
+Gyor.bindPopup('<b>Győr</b>, Hungary | Continental Europe</br> 09.07.2019 - 15.07.2019 | 7 days</br> <a href="https://osf.io/u9ekr/download">download</a> - 18.8 mb</br> See data: Karlsruhe, Oldenburg, Lisbon, Istanbul')
 
 // Sync Measurements
-Karlsruhe.bindPopup('<b>Karlsruhe</b>, Germany | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See simultaneous data from Békéscsaba, Győr, Hungary')
-Oldenburg.bindPopup('<b>Oldenburg</b>, Germany | Continental Europe</br> 2019-07-10 - 2019-08-07 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See simultaneous data from Békéscsaba, Győr, Hungary')
-Lisbon.bindPopup('<b>Lisbon</b>, Portugal | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See simultaneous data from Békéscsaba, Győr, Hungary<hr/> 2018-02-14 - 2018-02-21 | 6.8 days</br> <a href="https://osf.io/5zgwn/download">download</a> - 16.8 mb')
-Istanbul.bindPopup('<b>Istanbul</b>, Turkey | Continental Europe</br> 2019-07-09 - 2019-08-16 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See simultaneous data from Békéscsaba, Győr, Hungary')
+Karlsruhe.bindPopup('<b>Karlsruhe</b>, Germany | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary')
+Oldenburg.bindPopup('<b>Oldenburg</b>, Germany | Continental Europe</br> 2019-07-10 - 2019-08-07 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary')
+Lisbon.bindPopup('<b>Lisbon</b>, Portugal | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary<hr/> 2018-02-14 - 2018-02-21 | 6.8 days</br> <a href="https://osf.io/5zgwn/download">download</a> - 16.8 mb')
+Istanbul.bindPopup('<b>Istanbul</b>, Turkey | Continental Europe</br> 2019-07-09 - 2019-08-16 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary')
 
 
 // TSO data
