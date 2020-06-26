@@ -103,6 +103,39 @@
             "type": "folder",
             "children": [
               {
+                "name": "10",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "Data",
+                    "type": "file",
+                    "downloadURL": "https://osf.io/download/5eecf13c145b1a010d52e8da/"
+                  }
+                ]
+              },
+              {
+                "name": "11",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "Data",
+                    "type": "file",
+                    "downloadURL": "https://osf.io/download/5eecf1436598280102cf0b51/"
+                  }
+                ]
+              },
+              {
+                "name": "12",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "Data",
+                    "type": "file",
+                    "downloadURL": "https://osf.io/download/5eecf148145b1a011352d26c/"
+                  }
+                ]
+              },
+              {
                 "name": "01",
                 "children": []
               },
@@ -137,39 +170,6 @@
               {
                 "name": "09",
                 "children": []
-              },
-              {
-                "name": "10",
-                "type": "folder",
-                "children": [
-                  {
-                    "name": "Data",
-                    "type": "file",
-                    "downloadURL": "https://osf.io/download/5eecf13c145b1a010d52e8da/"
-                  }
-                ]
-              },
-              {
-                "name": "11",
-                "type": "folder",
-                "children": [
-                  {
-                    "name": "Data",
-                    "type": "file",
-                    "downloadURL": "https://osf.io/download/5eecf1436598280102cf0b51/"
-                  }
-                ]
-              },
-              {
-                "name": "12",
-                "type": "folder",
-                "children": [
-                  {
-                    "name": "Data",
-                    "type": "file",
-                    "downloadURL": "https://osf.io/download/5eecf148145b1a011352d26c/"
-                  }
-                ]
               }
             ]
           },
@@ -875,30 +875,6 @@
             "type": "folder",
             "children": [
               {
-                "name": "01",
-                "children": []
-              },
-              {
-                "name": "02",
-                "children": []
-              },
-              {
-                "name": "03",
-                "children": []
-              },
-              {
-                "name": "04",
-                "children": []
-              },
-              {
-                "name": "05",
-                "children": []
-              },
-              {
-                "name": "06",
-                "children": []
-              },
-              {
                 "name": "07",
                 "type": "folder",
                 "children": [
@@ -963,6 +939,30 @@
                     "downloadURL": "https://osf.io/download/5eef670f145b1a01725318fd/"
                   }
                 ]
+              },
+              {
+                "name": "01",
+                "children": []
+              },
+              {
+                "name": "02",
+                "children": []
+              },
+              {
+                "name": "03",
+                "children": []
+              },
+              {
+                "name": "04",
+                "children": []
+              },
+              {
+                "name": "05",
+                "children": []
+              },
+              {
+                "name": "06",
+                "children": []
               }
             ]
           },
@@ -3688,81 +3688,6 @@
                     "downloadURL": "https://osf.io/download/5ef285c1145b1a028d52ce4c/"
                   }
                 ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Independent measurements",
-    "type": "folder",
-    "tabSystem": true,
-    "children": [
-      {
-        "name": "Hungary",
-        "type": "folder",
-        "tabSystem": true,
-        "children": [
-          {
-            "name": "YYYY",
-            "type": "folder",
-            "children": [
-              {
-                "name": "01",
-                "type": "folder",
-                "children": [
-                  {
-                    "name": "Data",
-                    "type": "file",
-                    "downloadURL": "https://osf.io/download/pywx7/"
-                  }
-                ]
-              },
-              {
-                "name": "02",
-                "children": []
-              },
-              {
-                "name": "03",
-                "children": []
-              },
-              {
-                "name": "04",
-                "children": []
-              },
-              {
-                "name": "05",
-                "children": []
-              },
-              {
-                "name": "06",
-                "children": []
-              },
-              {
-                "name": "07",
-                "children": []
-              },
-              {
-                "name": "08",
-                "children": []
-              },
-              {
-                "name": "09",
-                "children": []
-              },
-              {
-                "name": "10",
-                "children": []
-              },
-              {
-                "name": "11",
-                "children": []
-              },
-              {
-                "name": "12",
-                "children": []
               }
             ]
           }

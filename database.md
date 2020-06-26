@@ -154,7 +154,7 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 </style>
 
 <script>
-      var sampleJsonEndpointURL = '../json/tableJsonOsf.json'
+      var tableJsonOsfUrl = '../automation/output/tableJsonOsf.json'
 
       // table divs in DOM
       tableGermany = document.getElementById("table-Germany")
@@ -162,7 +162,7 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
       tableFinland = document.getElementById("table-Finland")
       tableGreatBritain = document.getElementById("table-GreatBritain")
 
-      fetch(sampleJsonEndpointURL)
+      fetch(tableJsonOsfUrl)
         .then((response) => response.json())
         .then((data) => {
             continentalEuropeInfo = data[0]
