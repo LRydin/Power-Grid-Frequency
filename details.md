@@ -11,8 +11,8 @@ This database of power-grid frequency is comprised of open data existent across 
 
 The data found here is always free for usage. For each dataset you should check their licensing, to ensure no copyright violations and correct referencing. The data from the *TSOs* and *Independent Gatherings* is processed, using a set of scripts found in [scripts](https://github.com/LRydin/Power-Grid-Frequency/scripts). The data from other research projects is simply linked here, thus not processed, added to the map, and structured into the [database](/database). If you wish to add your data, contact us or open an issue on the Github repository [Power-Grid Frequency](https://github.com/LRydin/Power-Grid-Frequency).
 
-This is not a static database, we need everyone to contribute their data to ensure transparent and clean science. The data we processed and made available is hosted on the [Open Science Framework](https://osf.io/).
+This is not a static database, we need everyone to contribute their data to ensure transparent and clean science. The data we processed and made available is hosted on the [Open Science Framework](https://osf.io/). If you want to get more data or find models for various other energy-systems' related content, visit the [Open Power Systems Data](https://open-power-system-data.org/).
 
 In the [Playground](/playground) tab you can visualise snippets of the data available Here. The [Publications](/publications) tab list a set of publications that is based on the study of power-grid frequency. Some of the data of these publications is found here. The [Project](/project) section details the target of this project, the people involved, our view on open data, and our funding sources.
 
-<img src="assets/img/github.png" width="200" height="200" border="0" class="center" /><img src="assets/img/osf.png" width="200" height="200" border="0" class="center" />
+<img src="assets/img/github.png" width="200" height="200" border="0" class="center" /><img src="assets/img/osf.png" width="200" height="200" border="0" class="center" />  <img src="assets/img/OPSD_logo.png" width="230" height="230" border="0" class="center" />
