@@ -119,8 +119,8 @@ var	Karlsruhe     	= L.marker([ 49.0,  8.4 ], {icon: purpleIcon}),
     Istanbul      	= L.marker([ 41.0,  28.9], {icon: purpleIcon});
 
 var Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: yellowIcon}),
-		Gyor          	= L.marker([ 47.6,  17.6], {icon: yellowIcon});
-
+		Gyor          	= L.marker([ 47.6,  17.6], {icon: yellowIcon}),
+		Zealand        	= L.marker([ 55.676098,  12.568337], {icon: yellowIcon});
 
 // Cork.bindPopup('<b>Cork</b>, IE')
 Reykjavik.bindPopup('<b>Reykjavik</b>, Iceland | Icelandic Grid</br> 2017-10-14 - 2017-10-20 | 5.6 days</br>  <a href="https://osf.io/sxph8/download">download</a> - 15.4 mb' )
@@ -142,6 +142,8 @@ StPetersburg.bindPopup('<b>St. Petersburg</b>, Russia | Russian Grid</br>2019-04
 // Independent Measurements
 Bekescsaba.bindPopup('<b>Békéscsaba</b>, Hungary | Continental Europe</br> 09.07.2019 - 15.07.2019 | 8 days</br> <a href="https://osf.io/pywx7/download">download</a> - 19.2 mb')
 Gyor.bindPopup('<b>Győr</b>, Hungary | Continental Europe</br> 09.07.2019 - 15.07.2019 | 7 days</br> <a href="https://osf.io/u9ekr/download">download</a> - 18.8 mb</br> See data: Karlsruhe, Oldenburg, Lisbon, Istanbul')
+Zealand.bindPopup('<b>Zealand</b>, Denmark | Nordic Grid</br> 01.01.2018 - 31.13.2018 | 365 days</br> <a href="database/#denmark">link to database</a> - 150.8 mb</br>')
+
 
 // Sync Measurements
 Karlsruhe.bindPopup('<b>Karlsruhe</b>, Germany | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary')
@@ -171,7 +173,7 @@ var SemiSynchMeasurements = [
 var SynchMeasurementsLines = L.polyline(SynchMeasurements, {color: 'purple'})
 var SemiSynchMeasurementsLines = L.polyline(SemiSynchMeasurements, {color: 'purple', dashArray: '6'})
 
-var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
+var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, Zealand, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
 
 var NorthAmerica = L.layerGroup([SaltLake, College]);
 

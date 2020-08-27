@@ -1,6 +1,6 @@
 These recordings have been provided by [Prof. Dr. Hartman Bálint](www.vet.bme.hu) and have been recorded by the Hungarian TSO [MAVIR](https://www.mavir.hu/web/mavir-en).
 
-These are to simultaneous recordings.
+These are two simultaneous recordings.
 
 | Location | Country | Synchronous Area | resolution |  date range | number of days | direct link | size (mb) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
