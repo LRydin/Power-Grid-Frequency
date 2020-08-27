@@ -28,6 +28,9 @@ Synchronous Area| Location | Provider | Resolution | Date range |
 ## European Grid: Continental Europe
 An independent recording by the Hungarian TSO and involved scientist have provided a week-long recording from Békéscsaba and Győr, Hungary, in the Continental European Grid.
 
+## Nordic Grid: Zealand, Denmark
+An independent recording by the [ACES project](www.aces-bornholm.eu) in Zealand, Denmark, in the Nordic grid, for the (almost) full year of 2018.
+
 # Research Projects
 ## Projects:
 ### Power grid frequency data base
