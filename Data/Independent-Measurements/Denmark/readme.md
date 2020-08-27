@@ -4,7 +4,7 @@ This is a single recording of the year of 2018 with 2 decimal cases.
 
 | Location | Country | Synchronous Area | resolution |  date range | number of days | direct link | size (mb) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Zealand | Denmark | Nordic Grid | 1 sec |  2018-01-01 - 2018-12-31 | 365 | [External link](https://osf.io/pywx7/download) | 150.8 |
+| Zealand | Denmark | Nordic Grid | 1 sec |  2018-01-01 - 2018-12-31 | 365 | [External link](https://data.dtu.dk/ndownloader/files/22519508) | 150.8 |
 
 
 **Licensing**: Please contact Andreas Thingvad and Mattia Marinelli to obtain a correct citation/reference to this recording.

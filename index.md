@@ -140,9 +140,9 @@ CapeTown.bindPopup('<b>Cape Town</b>, South Africa | South African Grid</br> 201
 StPetersburg.bindPopup('<b>St. Petersburg</b>, Russia | Russian Grid</br>2019-04-30 - 2019-05-12 | 13.0 days</br> <a href="https://osf.io/tvsyc/download">download</a> - 44.5 mb')
 
 // Independent Measurements
-Bekescsaba.bindPopup('<b>Békéscsaba</b>, Hungary | Continental Europe</br> 09.07.2019 - 15.07.2019 | 8 days</br> <a href="https://osf.io/pywx7/download">download</a> - 19.2 mb')
-Gyor.bindPopup('<b>Győr</b>, Hungary | Continental Europe</br> 09.07.2019 - 15.07.2019 | 7 days</br> <a href="https://osf.io/u9ekr/download">download</a> - 18.8 mb</br> See data: Karlsruhe, Oldenburg, Lisbon, Istanbul')
-Zealand.bindPopup('<b>Zealand</b>, Denmark | Nordic Grid</br> 01.01.2018 - 31.13.2018 | 365 days</br> <a href="database/#denmark">link to database</a> - 150.8 mb</br>')
+Bekescsaba.bindPopup('<b>Békéscsaba</b>, Hungary | Continental Europe</br> 2019-07-09 - 2019-07-15 | 8 days</br> <a href="https://osf.io/pywx7/download">download</a> - 19.2 mb')
+Gyor.bindPopup('<b>Győr</b>, Hungary | Continental Europe</br> 2019-07-09 - 2019-07-15 | 7 days</br> <a href="https://osf.io/u9ekr/download">download</a> - 18.8 mb</br> See data: Karlsruhe, Oldenburg, Lisbon, Istanbul')
+Zealand.bindPopup('<b>Zealand</b>, Denmark | Nordic Grid</br> 2018-01.01 - 2018-12-31 | 365 days</br> <a href="database/#denmark">link to database</a> - 150.8 mb</br>')
 
 
 // Sync Measurements
