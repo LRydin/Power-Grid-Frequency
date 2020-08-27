@@ -142,7 +142,7 @@ StPetersburg.bindPopup('<b>St. Petersburg</b>, Russia | Russian Grid</br>2019-04
 // Independent Measurements
 Bekescsaba.bindPopup('<b>Békéscsaba</b>, Hungary | Continental Europe</br> 2019-07-09 - 2019-07-15 | 8 days</br> <a href="https://osf.io/pywx7/download">download</a> - 19.2 mb')
 Gyor.bindPopup('<b>Győr</b>, Hungary | Continental Europe</br> 2019-07-09 - 2019-07-15 | 7 days</br> <a href="https://osf.io/u9ekr/download">download</a> - 18.8 mb</br> See data: Karlsruhe, Oldenburg, Lisbon, Istanbul')
-Zealand.bindPopup('<b>Zealand</b>, Denmark | Nordic Grid</br> 2018-01.01 - 2018-12-31 | 365 days</br> <a href="database/#denmark">link to database</a> - 150.8 mb</br>')
+Zealand.bindPopup('<b>Zealand</b>, Denmark | Nordic Grid</br> 2018-01-01 - 2018-12-31 | 365 days</br> <a href="database/#denmark">link to database</a> - 150.8 mb</br>')
 
 
 // Sync Measurements
