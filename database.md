@@ -88,11 +88,15 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 
 {% include_relative /Data/Independent-Measurements/Hungary/readme.md %}
 
+### Denmark
+
+{% include_relative /Data/Independent-Measurements/Denmark/readmeCE.md %}
+
 ## Nordic Grid
 
 ### Denmark
 
-{% include_relative /Data/Independent-Measurements/Denmark/readme.md %}
+{% include_relative /Data/Independent-Measurements/Denmark/readmeNG.md %}
 
 <style>
       .downloadTablesContainerWrapper {
