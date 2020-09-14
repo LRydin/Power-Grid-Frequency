@@ -1,3 +1,5 @@
+<img src="Screenshot.png" title="Screenshot of the website" height="550"/>
+
 # Power-Grid Frequency
 
 This repository is the front-end of the data repository [Power-Grid-Frequency-Data](https://github.com/LRydin/Power-Grid-Frequency-Data). The website [Power-Grid Frequency Database](https://lrydin.github.io/Power-Grid-Frequency/) contains all the relevant information on the content of this database.
@@ -40,6 +42,7 @@ This is a set of 19 recordings in 12 synchronous regions, spanning from 1 day to
 It contains recordings from Reykjavík, Iceland, Vestmanna, Faroe Islands, Las Palmas de Gran Canaria, Canary Islands, Spain, Palma de Mallorca, Balearic Islands, Spain, Karlsruhe, Germany, Oldenburg, Germany, Istanbul, Turkey, Lisbon, Portugal, Lauris, France, Split, Croatia, Krakau, Poland, Erice, Sicily, Italy, London, United Kingdom, Tallin, Estonia, Stockholm, Sweden, Salt Lake City, Utah, USA, College Station, Texas, USA, Cape Town, South Africa, and St. Petersburg, Russia.
 
 # Changelog
+- Version 1.0 - Website online since July. Several contributions from other projects.
 - Version 0.4 - Building first structure of the website.
 - Version 0.3 - Moving to Github to produce a long-term repository.
 - Version 0.2 - Moved to [JuGit](https://jugit.fz-juelich.de/) server
