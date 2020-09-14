@@ -25,11 +25,12 @@ Synchronous Area| Location | Provider | Resolution | Date range |
 
 
 # Independent recording
-## European Grid: Continental Europe
-An independent recording by the Hungarian TSO and involved scientist have provided a week-long recording from Békéscsaba and Győr, Hungary, in the Continental European Grid.
+## European Grid: Győr and Békéscsaba, Hungary and Central Jutland, Denmark
+An independent recording by the Hungarian TSO MAVIR provided a week-long recording from Békéscsaba and Győr, Hungary, in the Continental European Grid.
+An independent recording by the [ACES project](https://www.aces-bornholm.eu) in Central Jutland, Denmark for the year of 2019.
 
 ## Nordic Grid: Zealand, Denmark
-An independent recording by the [ACES project](https://www.aces-bornholm.eu) in Zealand, Denmark, in the Nordic grid, for the (almost) full year of 2018.
+An independent recording by the [ACES project](https://www.aces-bornholm.eu) in Zealand, Denmark, in the Nordic grid, for the years of 2018 and 2019.
 
 # Research Projects
 ## Projects:
