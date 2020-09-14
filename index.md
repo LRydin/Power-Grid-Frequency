@@ -30,6 +30,8 @@ classes: wide
 
 <script>
 
+
+
 var viirs = 'VIIRS_SNPP_CorrectedReflectance_TrueColor';
 
 var basemap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -121,40 +123,49 @@ var Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: yellowIcon}),
 		DTU2          	= L.marker([ 56.162937, 10.203921], {icon: yellowIcon});
 
 
+var KIT_logo = '<img src="assets/img/KIT_logo.jpg" width="45" height="45"/></br>'
+var DTU_logo = '<img src="assets/img/DTU_logo.jpg" width="25" height="35"/></br>'
+var NG_logo = '<img src="assets/img/NG_logo.jpg" width="100" height="35"/></br>'
+var RTE_logo = '<img src="assets/img/RTE_logo.jpg" width="35" height="35"/></br>'
+var TransNetBW_logo = '<img src="assets/img/TransNetBW_logo.jpg" width="100" height="35"/></br>'
+var Fingrid_logo = '<img src="assets/img/Fingrid_logo.jpg" width="100" height="35"/></br>'
+var MAVIR_logo = '<img src="assets/img/MAVIR_logo.jpg" width="45" height="35"/></br>'
+
+
 // Cork.bindPopup('<b>Cork</b>, IE')
-Reykjavik.bindPopup('<b>Reykjavik</b>, Iceland | Icelandic Grid</br> 2017-10-14 - 2017-10-20 | 5.6 days</br>  <a href="https://osf.io/sxph8/download">download</a> - 15.4 mb', {maxWidth:500})
-Vestmanna.bindPopup('<b>Vestmanna</b>, Faroe Islands | Faroe Grid</br> 2019-11-03 - 2019-11-10 | 6.5 days</br> <a href="https://osf.io/a7h5b/download">download</a> - 24.5 mb', {maxWidth:500})
-GranCanaria.bindPopup('<b>Las Palmas de Gran Canaria</b>, Spain | Gran Canarian Grid</br> 2018-02-04 - 2018-02-10 | 6.5 days</br> <a href="https://osf.io/wz42b/download">download</a> - 16.2 mb<hr/> 2018-11-25 - 2018-11-26 | 1.5 days </br> <a href="https://osf.io/rukat/download">download</a> - 4.4 mb', {maxWidth:500})
-PalmaMallorca.bindPopup('<b>Palma de Mallorca</b>, Spain | Mallorcan Grid</br> 2019-09-29 - 2019-12-31 | 94.0 days </br> <a href="https://osf.io/2qn9k/download">download</a> - 324 mb', {maxWidth:500})
-London.bindPopup('<b>London</b>, United Kingdom | National Grid</br> 2019-03-04 - 2019-03-07 | 3.5 days </br> <a href="https://osf.io/cfv47/download">download</a> - 9.2 mb<hr/> 2019-11-10 - 2019-12-31 | 51.1 days </br> <a href="https://osf.io/h5ydu/download">download</a> - 135 mb<hr/>From January 2014 - December 2019</br> <a href="database/#great-britain">link to database</a> - 702.8 mb - 1 sec resolution', {maxWidth:500})
-Lauris.bindPopup('<b>Lauris</b>, France | Continental Europe</br> 2019-04-16 - 2019-04-27 | 12.0 days</br> <a href="https://osf.io/hfsrz/download">download</a> - 41.2 mb', {maxWidth:500})
-Split.bindPopup('<b>Split</b>, Croatia | Continental Europe</br> 2019-04-09 - 2019-04-12 | 4.0 days</br> <a href="https://osf.io/r9eh6/download">download</a> - 13.5 mb', {maxWidth:500})
-Erice.bindPopup('<b>Erice</b>, Italy | Continental Europe</br> 2019-07-02 - 2019-07-06 | 5.0 days</br> <a href="https://osf.io/c754b/download">download</a> - 17.1 mb', {maxWidth:500})
-Krakau.bindPopup('<b>Krakau</b>, Poland | Continental Europe</br> 2019-04-04 - 2019-04-07 | 4.0 days</br> <a href="https://osf.io/wq3te/download">download</a> - 13.6 mb', {maxWidth:500})
-Tallinn.bindPopup('<b>Tallinn</b>, Estonia | Baltic Grid</br> 2019-03-25 - 2019-04-17 | 22.9 days</br> <a href="https://osf.io/t5ske/download">download</a> - 79.0 mb', {maxWidth:500})
-Stockholm.bindPopup('<b>Stockholm</b>, Sweden | Nordic Grid</br> 2019-05-06 - 2019-05-13 | 6.7 days</br> <a href="https://osf.io/e2xfb/download">download</a> - 23.1 mb', {maxWidth:500})
-SaltLake.bindPopup('<b>Salt Lake City</b>, USA | Western Interconnection</br> 2019-05-19 - 2019-05-25 | 6.4 days</br> <a href="https://osf.io/8rp4v/download">download</a> - 16.5 mb', {maxWidth:500})
-College.bindPopup('<b>College Station</b>, USA | Texas Interconnection</br> 2019-05-15 - 2019-05-16 | 1.4 days</br> <a href="https://osf.io/t5wxz/download">download</a> - 3.7 mb<hr/>2019-05-20 - 2019-05-23 | 3.7 days</br> <a href="https://osf.io/zngy8/download">download</a> - 9.6 mb', {maxWidth:500})
-CapeTown.bindPopup('<b>Cape Town</b>, South Africa | South African Grid</br> 2017-11-19 - 2017-11-28 | 9.5 days</br> <a href="https://osf.io/gzk7d/download">download</a> - 27.0 mb', {maxWidth:500})
-StPetersburg.bindPopup('<b>St. Petersburg</b>, Russia | Russian Grid</br>2019-04-30 - 2019-05-12 | 13.0 days</br> <a href="https://osf.io/tvsyc/download">download</a> - 44.5 mb', {maxWidth:500})
+Reykjavik.bindPopup(KIT_logo + '<b>Reykjavik</b>, Iceland | Icelandic Grid</br> 2017-10-14 - 2017-10-20 | 5.6 days</br>  <a href="https://osf.io/sxph8/download">download</a> - 15.4 mb', {maxWidth:500})
+Vestmanna.bindPopup(KIT_logo + '<b>Vestmanna</b>, Faroe Islands | Faroe Grid</br> 2019-11-03 - 2019-11-10 | 6.5 days</br> <a href="https://osf.io/a7h5b/download">download</a> - 24.5 mb', {maxWidth:500})
+GranCanaria.bindPopup(KIT_logo + '<b>Las Palmas de Gran Canaria</b>, Spain | Gran Canarian Grid</br> 2018-02-04 - 2018-02-10 | 6.5 days</br> <a href="https://osf.io/wz42b/download">download</a> - 16.2 mb<hr/> 2018-11-25 - 2018-11-26 | 1.5 days </br> <a href="https://osf.io/rukat/download">download</a> - 4.4 mb', {maxWidth:500})
+PalmaMallorca.bindPopup(KIT_logo + '<b>Palma de Mallorca</b>, Spain | Mallorcan Grid</br> 2019-09-29 - 2019-12-31 | 94.0 days </br> <a href="https://osf.io/2qn9k/download">download</a> - 324 mb', {maxWidth:500})
+London.bindPopup(KIT_logo + '<b>London</b>, United Kingdom | National Grid</br> 2019-03-04 - 2019-03-07 | 3.5 days </br> <a href="https://osf.io/cfv47/download">download</a> - 9.2 mb<hr/> 2019-11-10 - 2019-12-31 | 51.1 days </br> <a href="https://osf.io/h5ydu/download">download</a> - 135 mb<hr/>' + NG_logo + 'From January 2014 - December 2019</br> <a href="database/#great-britain">link to database</a> - 702.8 mb - 1 sec resolution', {maxWidth:500})
+Lauris.bindPopup(KIT_logo + '<b>Lauris</b>, France | Continental Europe</br> 2019-04-16 - 2019-04-27 | 12.0 days</br> <a href="https://osf.io/hfsrz/download">download</a> - 41.2 mb', {maxWidth:500})
+Split.bindPopup(KIT_logo + '<b>Split</b>, Croatia | Continental Europe</br> 2019-04-09 - 2019-04-12 | 4.0 days</br> <a href="https://osf.io/r9eh6/download">download</a> - 13.5 mb', {maxWidth:500})
+Erice.bindPopup(KIT_logo + '<b>Erice</b>, Italy | Continental Europe</br> 2019-07-02 - 2019-07-06 | 5.0 days</br> <a href="https://osf.io/c754b/download">download</a> - 17.1 mb', {maxWidth:500})
+Krakau.bindPopup(KIT_logo + '<b>Krakau</b>, Poland | Continental Europe</br> 2019-04-04 - 2019-04-07 | 4.0 days</br> <a href="https://osf.io/wq3te/download">download</a> - 13.6 mb', {maxWidth:500})
+Tallinn.bindPopup(KIT_logo + '<b>Tallinn</b>, Estonia | Baltic Grid</br> 2019-03-25 - 2019-04-17 | 22.9 days</br> <a href="https://osf.io/t5ske/download">download</a> - 79.0 mb', {maxWidth:500})
+Stockholm.bindPopup(KIT_logo + '<b>Stockholm</b>, Sweden | Nordic Grid</br> 2019-05-06 - 2019-05-13 | 6.7 days</br> <a href="https://osf.io/e2xfb/download">download</a> - 23.1 mb', {maxWidth:500})
+SaltLake.bindPopup(KIT_logo + '<b>Salt Lake City</b>, USA | Western Interconnection</br> 2019-05-19 - 2019-05-25 | 6.4 days</br> <a href="https://osf.io/8rp4v/download">download</a> - 16.5 mb', {maxWidth:500})
+College.bindPopup(KIT_logo + '<b>College Station</b>, USA | Texas Interconnection</br> 2019-05-15 - 2019-05-16 | 1.4 days</br> <a href="https://osf.io/t5wxz/download">download</a> - 3.7 mb<hr/>2019-05-20 - 2019-05-23 | 3.7 days</br> <a href="https://osf.io/zngy8/download">download</a> - 9.6 mb', {maxWidth:500})
+CapeTown.bindPopup(KIT_logo + '<b>Cape Town</b>, South Africa | South African Grid</br> 2017-11-19 - 2017-11-28 | 9.5 days</br> <a href="https://osf.io/gzk7d/download">download</a> - 27.0 mb', {maxWidth:500})
+StPetersburg.bindPopup(KIT_logo + '<b>St. Petersburg</b>, Russia | Russian Grid</br>2019-04-30 - 2019-05-12 | 13.0 days</br> <a href="https://osf.io/tvsyc/download">download</a> - 44.5 mb', {maxWidth:500})
 
 // Independent Measurements
-Bekescsaba.bindPopup('<b>Békéscsaba</b>, Hungary | Continental Europe</br> 2019-07-09 - 2019-07-15 | 8 days</br> <a href="https://osf.io/pywx7/download">download</a> - 19.2 mb', {maxWidth:500})
-Gyor.bindPopup('<b>Győr</b>, Hungary | Continental Europe</br> 2019-07-09 - 2019-07-15 | 7 days</br> <a href="https://osf.io/u9ekr/download">download</a> - 18.8 mb</br> See data: Karlsruhe, Oldenburg, Lisbon, Istanbul', {maxWidth:500})
-DTU1.bindPopup('<b>Zealand</b>, Denmark | Nordic Grid</br> 2018-01-01 - 2018-12-31 | 365 days</br> <a href="database/#denmark-1">link to database</a> - 150.8 mb</br> <hr/> 2019-01-01 - 2019-12-31 | 365 days</br> <a href="database/#denmark-1">link to database</a> - 298.1 mb</br>', {maxWidth:500})
-DTU2.bindPopup('<b>Central Jutland</b>, Denmark | Continental Europe</br> 2019-01-01 - 2019-12-31 | 365 days</br> <a href="database/#denmark">link to database</a> - 286.1 mb</br>', {maxWidth:500})
+Bekescsaba.bindPopup(MAVIR_logo + '<b>Békéscsaba</b>, Hungary | Continental Europe</br> 2019-07-09 - 2019-07-15 | 8 days</br> <a href="https://osf.io/pywx7/download">download</a> - 19.2 mb', {maxWidth:500})
+Gyor.bindPopup(MAVIR_logo + '<b>Győr</b>, Hungary | Continental Europe</br> 2019-07-09 - 2019-07-15 | 7 days</br> <a href="https://osf.io/u9ekr/download">download</a> - 18.8 mb</br> See data: Karlsruhe, Oldenburg, Lisbon, Istanbul', {maxWidth:500})
+DTU1.bindPopup(DTU_logo + '<b>Zealand</b>, Denmark | Nordic Grid</br> 2018-01-01 - 2018-12-31 | 365 days</br> <a href="database/#denmark-1">link to database</a> - 150.8 mb</br> <hr/> 2019-01-01 - 2019-12-31 | 365 days</br> <a href="database/#denmark-1">link to database</a> - 298.1 mb</br>', {maxWidth:500})
+DTU2.bindPopup(DTU_logo + '<b>Central Jutland</b>, Denmark | Continental Europe</br> 2019-01-01 - 2019-12-31 | 365 days</br> <a href="database/#denmark">link to database</a> - 286.1 mb</br>', {maxWidth:500})
 
 // Sync Measurements
-Karlsruhe.bindPopup('<b>Karlsruhe</b>, Germany | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary', {maxWidth:500})
-Oldenburg.bindPopup('<b>Oldenburg</b>, Germany | Continental Europe</br> 2019-07-10 - 2019-08-07 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary', {maxWidth:500})
-Lisbon.bindPopup('<b>Lisbon</b>, Portugal | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary<hr/> 2018-02-14 - 2018-02-21 | 6.8 days</br> <a href="https://osf.io/5zgwn/download">download</a> - 16.8 mb', {maxWidth:500})
-Istanbul.bindPopup('<b>Istanbul</b>, Turkey | Continental Europe</br> 2019-07-09 - 2019-08-16 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary', {maxWidth:500})
+Karlsruhe.bindPopup(KIT_logo + '<b>Karlsruhe</b>, Germany | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary', {maxWidth:500})
+Oldenburg.bindPopup(KIT_logo + '<b>Oldenburg</b>, Germany | Continental Europe</br> 2019-07-10 - 2019-08-07 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary', {maxWidth:500})
+Lisbon.bindPopup(KIT_logo + '<b>Lisbon</b>, Portugal | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary<hr/> 2018-02-14 - 2018-02-21 | 6.8 days</br> <a href="https://osf.io/5zgwn/download">download</a> - 16.8 mb', {maxWidth:500})
+Istanbul.bindPopup(KIT_logo + '<b>Istanbul</b>, Turkey | Continental Europe</br> 2019-07-09 - 2019-08-16 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary', {maxWidth:500})
 
 
 // TSO data
-TransnetBW.bindPopup('<b>Stuttgart</b>, Germany | Continental Europe</br> From July 2011 - March 2020</br> <a href="database/#continental-europe">link to database</a> - 1.1 gb - 1 sec resolution')
-RTE.bindPopup('<b>Paris</b>, France | Continental Europe</br> From October 2014 - May 2020</br> <a href="database/#continental-europe">link to database</a> - 100.7 mb - 10 sec resolution')
-FinGrid.bindPopup('<b>Helsinki</b>, Finland | Nordic Grid </br> From January 2015 - December 2019</br> <a href="database/#finland">link to database</a> - 5.1 gb - 0.1 sec resolution')
+TransnetBW.bindPopup(TransNetBW_logo + '<b>Stuttgart</b>, Germany | Continental Europe</br> From July 2011 - March 2020</br> <a href="database/#continental-europe">link to database</a> - 1.1 gb - 1 sec resolution')
+RTE.bindPopup(RTE_logo + '<b>Paris</b>, France | Continental Europe</br> From October 2014 - May 2020</br> <a href="database/#continental-europe">link to database</a> - 100.7 mb - 10 sec resolution')
+FinGrid.bindPopup(Fingrid_logo + '<b>Helsinki</b>, Finland | Nordic Grid </br> From January 2015 - December 2019</br> <a href="database/#finland">link to database</a> - 5.1 gb - 0.1 sec resolution')
 
 
 var SynchMeasurements = [
