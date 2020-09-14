@@ -1,4 +1,4 @@
-<img src="Screenshot.png" title="Screenshot of the website" height="550"/>
+<img src="Screenshot.png" title="Screenshot of the website" height="300"/>
 
 # Power-Grid Frequency
 
