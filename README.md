@@ -2,14 +2,14 @@
 
 # Power-Grid Frequency
 
-This repository is the front-end of the data repository [Power-Grid-Frequency-Data](https://github.com/LRydin/Power-Grid-Frequency-Data). The website [Power-Grid Frequency Database](https://lrydin.github.io/Power-Grid-Frequency/) contains all the relevant information on the content of this database.
+This repository is the front-end of the data repository in the Open Science Framework [Open Access Power-Grid Frequency Database](https://osf.io/m43tg/). The website [Power-Grid Frequency Database](https://lrydin.github.io/Power-Grid-Frequency/) contains all the relevant information on the content of this database. Thus, you will not find the data in this GitHub repository. Visit the website of the OSF to access the data.
 
 This database of power-grid frequency is comprised of open data existent across three dimensions:
  - TSO data: Transmission System's Operator (TSO) recordings made public;
  - Research projects: Open-data database research projects;
  - Independent Gatherings: Industrial, private, or personal recordings that were made publicly available.
 
-The data found here is always free for usage. It is processed, using a set of scripts found Power-Grid [Power-Grid-Frequency-Data](https://github.com/LRydin/Power-Grid-Frequency-Data/scripts), for research usage.
+The data found here is always free for usage. It is processed, using a set of scripts found [here](https://github.com/LRydin/Power-Grid-Frequency/tree/master/scripts), for research usage.
 
 Currently the following recordings are available, under the three major categories described above:
 
@@ -32,7 +32,7 @@ An independent recording by the Hungarian TSO MAVIR provided a week-long recordi
 An independent recording by the [ACES project](https://www.aces-bornholm.eu) in Central Jutland, Denmark for the year of 2019.
 
 ## Nordic Grid: Zealand, Denmark
-An independent recording by the [ACES project](https://www.aces-bornholm.eu) in Zealand, Denmark, in the Nordic grid, for the years of 2018 and 2019.
+Two independent recordings by the [ACES project](https://www.aces-bornholm.eu) in Zealand, Denmark, in the Nordic grid, for the years of 2018 and 2019.
 
 # Research Projects
 ## Projects:
@@ -53,7 +53,7 @@ If you have open data from power-grid system, be it frequency, voltages, load, c
 
 ## Affiliated institutions and collaborators
 
-This project came to life by Leonardo Rydin Gorjão in 2018 on a GitHub repository. Benjamin Schäfer and Mehrnaz Anvari contributed over the past two years this much of the support. Galib Hassan and Leonardo Rydin Gorjão designed the website. Johannes Kruse helped with the data and scripts. Benjamin Schäfer and Leonardo Rydin Gorjão have built up the collaboration that brought about part of the data.
+This project came to life by Leonardo Rydin Gorjão in 2018 on a GitHub repository. Benjamin Schäfer and Mehrnaz Anvari contributed over the past two years. Galib Hassan and Leonardo Rydin Gorjão designed the website. Johannes Kruse helped with the data and scripts. Benjamin Schäfer and Leonardo Rydin Gorjão have built up the collaboration that brought about part of the data. We are thankful for all the collaborations, with data and comments, from across the globe.
 
 ### Funding
 Helmholtz Association Initiative *Energy System 2050 - A Contribution of the Research Field Energy* and the grant No. VH-NG-1025.
