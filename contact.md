@@ -10,7 +10,7 @@ classes: wide
 ---
 
 ## Contact details
-If you have any questions, suggestions, or remarks, please contact <a href="mailto:leonardo.rydin@gmail.com">Leonardo Rydin</a>.
+If you have any questions, suggestions, or remarks, please contact <a href="mailto:leonardo.rydin@gmail.com">Leonardo Rydin</a> and <a href="mailto:b.schaefer@qmul.ac.uk ">Benjamin Schäfer</a>.
 
 ## Contribution
 If you wish to contribute, open an issue on the GitHub repository [Power-Grid-Frequency](https://github.com/LRydin/Power-Grid-Frequency/issues) and we will add the data, convert it into the desired format, report on the relevant information, and upload it to the repository.
