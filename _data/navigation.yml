@@ -3,7 +3,7 @@ main:
     url: /database/
     description: Database and relevant links to other databased
   - title: "Playground"
-    url: /playground/
+    url: /charts/
     description: Visualise the data on-the-fly.
   - title: "Publications"
     url: /publications/
