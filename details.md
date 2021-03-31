@@ -13,5 +13,7 @@ The data found here is always free for usage. For each dataset you should check 
 
 This is not a static database, we welcome everyone to contribute their data to ensure transparent and clean science. The data we processed and made available is hosted on the [Open Science Framework](https://osf.io/). If you want to get more data or find models for various other energy-systems' related content, visit the [Open Power Systems Data](https://open-power-system-data.org/).
 
+This database and website are register in the [https://www.re3data.org/](https://www.re3data.org/repository/r3d100013364) registry.
+
 
 <img src="assets/img/github_dark.png" width="200" height="200" border="0" class="center" /><img src="assets/img/osf.png" width="200" height="200" border="0" class="center" />  <img src="assets/img/OPSD_logo.png" width="230" height="230" border="0" class="center" /> <img src="assets/img/re3data_logo.png" height="230" border="0" class="center" />

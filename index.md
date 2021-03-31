@@ -120,7 +120,9 @@ var	Karlsruhe     	= L.marker([ 49.0,  8.4 ], {icon: purpleIcon}),
 var Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: yellowIcon}),
 		Gyor          	= L.marker([ 47.6,  17.6], {icon: yellowIcon}),
 		DTU1          	= L.marker([ 55.693589, 12.097191], {icon: yellowIcon}),
-		DTU2          	= L.marker([ 56.162937, 10.203921], {icon: yellowIcon});
+		DTU2          	= L.marker([ 56.162937, 10.203921], {icon: yellowIcon}),
+    Tokyo           = L.marker([ 35.682604,139.752766], {icon: yellowIcon});
+
 
 
 var KIT_logo = '<img src="assets/img/KIT_logo.jpg" width="45" height="45"/></br>'
@@ -154,6 +156,8 @@ Bekescsaba.bindPopup(MAVIR_logo + '<b>Békéscsaba</b>, Hungary | Continental Eu
 Gyor.bindPopup(MAVIR_logo + '<b>Győr</b>, Hungary | Continental Europe</br> 2019-07-09 - 2019-07-15 | 7 days</br> <a href="https://osf.io/u9ekr/download">download</a> - 18.8 mb</br> See data: Karlsruhe, Oldenburg, Lisbon, Istanbul', {maxWidth:500})
 DTU1.bindPopup(DTU_logo + '<b>Zealand</b>, Denmark | Nordic Grid</br> 2018-01-01 - 2018-12-31 | 365 days</br> <a href="database/#denmark-1">link to database</a> - 150.8 mb</br> <hr/> 2019-01-01 - 2019-12-31 | 365 days</br> <a href="database/#denmark-1">link to database</a> - 298.1 mb</br>', {maxWidth:500})
 DTU2.bindPopup(DTU_logo + '<b>Central Jutland</b>, Denmark | Continental Europe</br> 2019-01-01 - 2019-12-31 | 365 days</br> <a href="database/#denmark">link to database</a> - 286.1 mb</br>', {maxWidth:500})
+Tokyo.bindPopup(DTU_logo + '<b>Tokyo</b>, Japan | Japanese 50Hz</br> 20220-01-01 - 2020-12-31 | 317 days</br> <a href="database/#japan">link to database</a> - 250.3 mb</br>', {maxWidth:500})
+
 
 // Sync Measurements
 Karlsruhe.bindPopup(KIT_logo + '<b>Karlsruhe</b>, Germany | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary', {maxWidth:500})
@@ -183,7 +187,7 @@ var SemiSynchMeasurements = [
 var SynchMeasurementsLines = L.polyline(SynchMeasurements, {color: 'purple'})
 var SemiSynchMeasurementsLines = L.polyline(SemiSynchMeasurements, {color: 'purple', dashArray: '6'})
 
-var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, DTU1, DTU2, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
+var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, DTU1, DTU2, Tokyo, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
 
 var NorthAmerica = L.layerGroup([SaltLake, College]);
 

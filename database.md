@@ -75,3 +75,9 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 ### Denmark
 
 {% include_relative /Data/Independent-Measurements/Denmark/readmeNG.md %}
+
+## Japan
+
+### Japanese 50Hz Grid
+
+{% include_relative /Data/Independent-Measurements/Japan/Japanese50Hz/readmeJapan.md %}
