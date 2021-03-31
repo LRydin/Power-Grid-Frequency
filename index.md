@@ -300,5 +300,4 @@ info.addTo(map);
 
 </script>
 
-
 {% include_relative details.md %}
