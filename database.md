@@ -38,6 +38,9 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
   <div id='table-Germany' class="downloadTablesContainer realm"></div>
 </div>
 
+
+
+
 {% include_relative /Data/Continental-Europe/Germany/readme.md %}
 
 

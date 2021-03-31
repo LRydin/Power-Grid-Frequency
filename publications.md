@@ -14,20 +14,20 @@ A collection of power-grid-frequency related articles can be found here. We repo
 
 ## Publications associated with this database
 
+### Open data base analysis of scaling and spatio-temporal properties of power grid frequencies
+L. Rydin Gorjão, R. Jumar, H. Maass, V. Hagenmeyer, J. Kruse, M. Timme, C. Beck, D. Witthaut, B. Schäfer  
+Nature Communications **11**, 6362 (2020) [<a href="https://doi.org/10.1038/s41467-020-19732-7" class="Blau">article</a>] [<a href="https://arxiv.org/abs/2006.02481" class="Blau">preprint</a>]
+
+<details><summary>Abstract</summary>
+<blockquote>The electrical energy system has attracted much attention from an increasingly diverse research community. Many theoretical predictions have been made, from scaling laws of fluctuations to propagation velocities of disturbances. However, to validate any theory, empirical data from large-scale power systems are necessary but are rarely shared openly. Here, we analyse an open data base of measurements of electric power grid frequencies across 17 locations in 12 synchronous areas on three continents. The power grid frequency is of particular interest, as it indicates the balance of supply and demand and carries information on deterministic, stochastic, and control influences. We perform a broad analysis of the recorded data, compare different synchronous areas and validate a previously conjectured scaling law. Furthermore, we show how fluctuations change from local independent oscillations to a homogeneous bulk behaviour. Overall, the presented open data base and analyses may constitute a step towards more shared, collaborative energy research.</blockquote>
+</details>
+
 ### Power grid frequency data base
 R. Jumar, H. Maaß, B. Schäfer, L. Rydin Gorjão, V. Hagenmeyer  
 arXiv:2006.01771, 2020 [<a href="https://arxiv.org/abs/2006.01771" class="Blau">preprint</a>]
 
-<details open><summary>Abstract</summary>
+<details><summary>Abstract</summary>
 <blockquote>The transformation of the electrical energy system due to the increasing infeed from renewable energy sources has attracted much attention in diverse research communities. Novel approaches for grid control, grid modeling, and grid architectures are widely proposed. However, data from actual power system operation are rarely available but are critically necessary to analyze real-world scenarios or to evaluate models. In the present paper, we introduce a precisely time-stamped data set comprising power grid frequency measurements from twelve independent synchronous areas of different sizes in one-second resolution. Furthermore, the data includes a synchronized measurement of the frequency within the Continental European synchronous area with measurement points in Portugal, Germany, and Turkey, maximizing the geographical span. Finally, we provide excerpts of the underlying raw data. Data were collected using a self-developed Phasor-Measurement-Unit(PMU)-like device, the Electrical Data Recorder (EDR), connected mostly to conventional low-voltage power outlets.</blockquote>
-</details>
-
-### Open data base analysis of scaling and spatio-temporal properties of power grid frequencies
-L. Rydin Gorjão, R. Jumar, H. Maass, V. Hagenmeyer, J. Kruse, M. Timme, C. Beck, D. Witthaut, B. Schäfer  
-arXiv:2006.02481, 2020 [<a href="https://arxiv.org/abs/2006.02481" class="Blau">preprint</a>]
-
-<details open><summary>Abstract</summary>
-<blockquote>The electrical energy system has attracted much attention from an increasingly diverse research community. Many theoretical predictions have been made, from scaling laws of fluctuations to propagation velocities of disturbances. However, to validate any theory, empirical data from large-scale power systems are necessary but are rarely shared openly. Here, we analyse an open data base of measurements of electric power grid frequencies across 17 locations in 12 synchronous areas on three continents. The power grid frequency is of particular interest, as it indicates the balance of supply and demand and carries information on deterministic, stochastic, and control influences. We perform a broad analysis of the recorded data, compare different synchronous areas and validate a previously conjectured scaling law. Furthermore, we show how fluctuations change from local independent oscillations to a homogeneous bulk behaviour. Overall, the presented open data base and analyses may constitute a step towards more shared, collaborative energy research.</blockquote>
 </details>
 
 ## Other publications on power-grid frequency studies

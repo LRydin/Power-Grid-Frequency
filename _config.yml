@@ -3,11 +3,11 @@ repository: LRydin/Power-Grid-Frequency
 baseurl: /
 permalink: '/:title/'
 remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: "dark"
+minimal_mistakes_skin: "dirt"
 
 footer:
   tagline: Power-grid frequency recordings database
-  content: '&copy; Leonardo Rydin Gorjão'
+  content: '&copy; Leonardo Rydin Gorjão and Benjamin Schäfer'
   #links:
   #  - text: Made with Jekyll
   #    new_window: true
