@@ -124,7 +124,6 @@ var Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: yellowIcon}),
     Tokyo           = L.marker([ 35.682604,139.752766], {icon: yellowIcon});
 
 
-
 var KIT_logo = '<img src="assets/img/KIT_logo.jpg" width="45" height="45"/></br>'
 var DTU_logo = '<img src="assets/img/DTU_logo.jpg" width="25" height="35"/></br>'
 var NG_logo = '<img src="assets/img/NG_logo.jpg" width="100" height="35"/></br>'
