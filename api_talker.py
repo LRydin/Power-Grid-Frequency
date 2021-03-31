@@ -4,7 +4,7 @@ import pandas as pd
 from tqdm import tqdm
 
 # from requests.auth import HTTPBasicAuth
-OSF_TOKEN = 'tHGlwS8G13M83iFnPpX0JKEfKPFZHTPS10Sfs4a8Gkvbx31uS0QFv3bPHAHGnu4nAXgFk1'
+OSF_TOKEN = '...'
 ME = 'https://api.osf.io/v2/users/djgaz/'
 headers = {'Authorization': 'Bearer {}'.format(OSF_TOKEN)}
 
