@@ -169,12 +169,8 @@ Gyor.bindPopup(MAVIR_logo + '<b>Győr</b>, Hungary | Continental Europe</br> 201
 DTU1.bindPopup(DTU_logo + '<b>Zealand</b>, Denmark | Nordic Grid</br> 2018-01-01 - 2018-12-31 | 365 days</br> <a href="database/#denmark-1">link to database</a> - 150.8 mb</br> <hr/> 2019-01-01 - 2019-12-31 | 365 days</br> <a href="database/#denmark-1">link to database</a> - 298.1 mb</br>', {maxWidth:500})
 DTU2.bindPopup(DTU_logo + '<b>Central Jutland</b>, Denmark | Continental Europe</br> 2019-01-01 - 2019-12-31 | 365 days</br> <a href="database/#denmark">link to database</a> - 286.1 mb</br>', {maxWidth:500})
 Tokyo.bindPopup(DTU_logo + '<b>Tokyo</b>, Japan | Japanese 50Hz</br> 20220-01-01 - 2020-12-31 | 317 days</br> <a href="database/#japan">link to database</a> - 250.3 mb</br>', {maxWidth:500})
-
-
 NorthSweden.bindPopup('<b>North Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.0 gb</br>', {maxWidth:500})
-
 MidSweden.bindPopup('<b>Mid Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.2 gb</br>', {maxWidth:500})
-
 SouthSweden.bindPopup('<b>South Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.1 gb</br>', {maxWidth:500})
 
 // Sync Measurements
@@ -201,11 +197,16 @@ var SemiSynchMeasurements = [
 		[[49.0,  8.4],[47.6,  17.6]]
 ];
 
+var SemiSynchMeasurementsNG = [
+    [[63.126178, 15.205319],[66.353562, 19.323426]],
+		[[63.126178, 15.205319],[58.310608, 14.511484]]
+];
 
 var SynchMeasurementsLines = L.polyline(SynchMeasurements, {color: 'purple'})
 var SemiSynchMeasurementsLines = L.polyline(SemiSynchMeasurements, {color: 'purple', dashArray: '6'})
+var SemiSynchMeasurementsNGLines = L.polyline(SemiSynchMeasurementsNG, {color: 'gold', dashArray: '6'})
 
-var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, DTU1, DTU2, NorthSweden, MidSweden, SouthSweden, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
+var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, DTU1, DTU2, NorthSweden, MidSweden, SouthSweden, SynchMeasurementsLines, SemiSynchMeasurementsLines, SemiSynchMeasurementsNGLines]);
 
 var NorthAmerica = L.layerGroup([SaltLake, College]);
 
@@ -213,12 +214,20 @@ var Asia = L.layerGroup([Tokyo]);
 
 var Africa = L.layerGroup([CapeTown]);
 
+
+// Sectioning years
+var TSOs = L.layerGroup([TransnetBW, RTE, FinGrid, London]);
+var y2020 = L.layerGroup([Tokyo, NorthSweden, MidSweden, SouthSweden, SemiSynchMeasurementsNGLines]);
+var y2019 = L.layerGroup([Vestmanna, GranCanaria, Karlsruhe, Oldenburg, Lisbon, Istanbul, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, SaltLake, College, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
+var y2018 = L.layerGroup([PalmaMallorca, DTU1, DTU2]);
+var y2017 = L.layerGroup([Reykjavik, CapeTown]);
+
 // Deploy map
 
 var map = L.map('map', {
   'center': [25, -5],
   'zoom': 2,
-  'layers': [basemap, Europe, NorthAmerica, Africa, Asia]
+  'layers': [basemap, TSOs, y2020, y2019, y2018, y2017]
 });
 
 // GeoJSONs
@@ -242,14 +251,15 @@ L.geoJson(SouthAfricaGeo, {style: style, onEachFeature: onEachFeature}).addTo(ma
 
 // Layers and layer control
 
-var LayerOfMap = { "<span style='color: black'><b>OpenStreetMap</b></span>": basemap };
+var LayerOfMap = { "<span style='color: black'><b>OpenStreetMap</b></span>": basemap};
 
 var overlayMaps = {
-    "<span style='color: black'>Europe</span>": Europe,
-		"<span style='color: black'>North America</span>": NorthAmerica,
-		"<span style='color: black'>Africa</span>": Africa,
-    "<span style='color: black'>Asia</span>": Asia
+    "<span style='color: black'>2020</span>": y2020,
+    "<span style='color: black'>2019</span>": y2019,
+    "<span style='color: black'>2018</span>": y2018,
+    "<span style='color: black'>2017</span>": y2017,
 };
+
 
 L.control.layers(LayerOfMap, overlayMaps).addTo(map);
 
