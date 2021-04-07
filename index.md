@@ -173,9 +173,9 @@ Tokyo.bindPopup(DTU_logo + '<b>Tokyo</b>, Japan | Japanese 50Hz</br> 20220-01-01
 
 NorthSweden.bindPopup('<b>North Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.0 gb</br>', {maxWidth:500})
 
-MidSweden.bindPopup('<b>Mid Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.0 gb</br>', {maxWidth:500})
+MidSweden.bindPopup('<b>Mid Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.2 gb</br>', {maxWidth:500})
 
-SouthSweden.bindPopup('<b>South Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.0 gb</br>', {maxWidth:500})
+SouthSweden.bindPopup('<b>South Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.1 gb</br>', {maxWidth:500})
 
 // Sync Measurements
 Karlsruhe.bindPopup(KIT_logo + '<b>Karlsruhe</b>, Germany | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary', {maxWidth:500})

@@ -11,7 +11,7 @@ Given the size of the recordings, a separate OSF repository was created, denoted
 |  Location of measurements  | resolution |  precision   |      date range       | Size of database |
 | :------------------------: | :--------: | :----------: | :-------------------: | :--------------: |
 |         North Sweden       |  0.02 sec  |  3 decimal   | 01.01.2020-31.12.2020 |      9.0 Gb      |
-|          Mid Sweden        |  0.02 sec  |  3 decimal   | 01.01.2020-31.12.2020 |      9.0 Gb      |
-|         South Sweden       |  0.02 sec  |  3 decimal   | 01.01.2020-31.12.2020 |      9.0 Gb      |
+|          Mid Sweden        |  0.02 sec  |  3 decimal   | 01.01.2020-31.12.2020 |      9.2 Gb      |
+|         South Sweden       |  0.02 sec  |  3 decimal   | 01.01.2020-31.12.2020 |      9.1 Gb      |
 
 **Licensing**: The data provider requests to be referred solely as *the Swedist TSO*.
