@@ -58,26 +58,30 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 
 {% include_relative /Data/Research-Projects/Power-grid-frequency-data-base/readme.md %}
 
+## Aces
+
+### Denmark, Continental Europe
+
+{% include_relative /Data/Research-Projects/ACES/Denmark/readmeCE.md %}
+
+### Denmark, Nordic Grid
+
+{% include_relative /Data/Research-Projects/ACES/Denmark/readmeNG.md %}
+
+### Japan, Japanese 50Hz Grid
+
+{% include_relative /Data/Research-Projects/ACES/Japan/Japanese50Hz/readmeJapan.md %}
+
 # Independent measurements
 
 ## Continental Europe
 
 ### Hungary
 
-{% include_relative /Data/Independent-Measurements/Hungary/readme.md %}
-
-### Denmark
-
-{% include_relative /Data/Independent-Measurements/Denmark/readmeCE.md %}
+{% include_relative /Data/Research-Projects/ACES/Hungary/readme.md %}
 
 ## Nordic Grid
 
-### Denmark
+### Sweden
 
-{% include_relative /Data/Independent-Measurements/Denmark/readmeNG.md %}
-
-## Japan
-
-### Japanese 50Hz Grid
-
-{% include_relative /Data/Independent-Measurements/Japan/Japanese50Hz/readmeJapan.md %}
+{% include_relative /Data/Nordic-Grid/Sweden/readme.md%}

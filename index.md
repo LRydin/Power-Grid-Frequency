@@ -90,6 +90,16 @@ var yellowIcon = L.icon({
 		shadowSize:  [41, 41]
 });
 
+var yellowTarget = L.icon({
+    iconUrl: 'assets/js/images/marker-target-yellow.png',
+    shadowUrl: 'assets/js/images/marker-target-shadow.png',
+		iconSize:    [25, 25],
+		iconAnchor:  [12, 12],
+		popupAnchor: [1, -14],
+		tooltipAnchor: [16, -28],
+		shadowSize:  [27, 27]
+});
+
 var TransnetBW      = L.marker([ 48.777111, 9.180770]),
     RTE             = L.marker([ 48.856666, 2.3522]),
 		FinGrid         = L.marker([ 60.169857, 24.938379]);
@@ -121,8 +131,10 @@ var Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: yellowIcon}),
 		Gyor          	= L.marker([ 47.6,  17.6], {icon: yellowIcon}),
 		DTU1          	= L.marker([ 55.693589, 12.097191], {icon: yellowIcon}),
 		DTU2          	= L.marker([ 56.162937, 10.203921], {icon: yellowIcon}),
-    Tokyo           = L.marker([ 35.682604,139.752766], {icon: yellowIcon});
-
+    Tokyo           = L.marker([ 35.682604,139.752766], {icon: yellowIcon}),
+    NorthSweden     = L.marker([ 66.353562, 19.323426], {icon: yellowTarget}),
+    MidSweden       = L.marker([ 63.126178, 15.205319], {icon: yellowTarget}),
+    SouthSweden     = L.marker([ 58.310608, 14.511484], {icon: yellowTarget});
 
 
 var KIT_logo = '<img src="assets/img/KIT_logo.jpg" width="45" height="45"/></br>'
@@ -159,6 +171,12 @@ DTU2.bindPopup(DTU_logo + '<b>Central Jutland</b>, Denmark | Continental Europe<
 Tokyo.bindPopup(DTU_logo + '<b>Tokyo</b>, Japan | Japanese 50Hz</br> 20220-01-01 - 2020-12-31 | 317 days</br> <a href="database/#japan">link to database</a> - 250.3 mb</br>', {maxWidth:500})
 
 
+NorthSweden.bindPopup('<b>North Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.0 gb</br>', {maxWidth:500})
+
+MidSweden.bindPopup('<b>Mid Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.0 gb</br>', {maxWidth:500})
+
+SouthSweden.bindPopup('<b>South Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.0 gb</br>', {maxWidth:500})
+
 // Sync Measurements
 Karlsruhe.bindPopup(KIT_logo + '<b>Karlsruhe</b>, Germany | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary', {maxWidth:500})
 Oldenburg.bindPopup(KIT_logo + '<b>Oldenburg</b>, Germany | Continental Europe</br> 2019-07-10 - 2019-08-07 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary', {maxWidth:500})
@@ -187,9 +205,11 @@ var SemiSynchMeasurements = [
 var SynchMeasurementsLines = L.polyline(SynchMeasurements, {color: 'purple'})
 var SemiSynchMeasurementsLines = L.polyline(SemiSynchMeasurements, {color: 'purple', dashArray: '6'})
 
-var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, DTU1, DTU2, Tokyo, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
+var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, DTU1, DTU2, NorthSweden, MidSweden, SouthSweden, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
 
 var NorthAmerica = L.layerGroup([SaltLake, College]);
+
+var Asia = L.layerGroup([Tokyo]);
 
 var Africa = L.layerGroup([CapeTown]);
 
@@ -198,7 +218,7 @@ var Africa = L.layerGroup([CapeTown]);
 var map = L.map('map', {
   'center': [25, -5],
   'zoom': 2,
-  'layers': [basemap, Europe, NorthAmerica, Africa]
+  'layers': [basemap, Europe, NorthAmerica, Africa, Asia]
 });
 
 // GeoJSONs
@@ -227,15 +247,11 @@ var LayerOfMap = { "<span style='color: black'><b>OpenStreetMap</b></span>": bas
 var overlayMaps = {
     "<span style='color: black'>Europe</span>": Europe,
 		"<span style='color: black'>North America</span>": NorthAmerica,
-		"<span style='color: black'>Africa</span>": Africa
+		"<span style='color: black'>Africa</span>": Africa,
+    "<span style='color: black'>Asia</span>": Asia
 };
 
 L.control.layers(LayerOfMap, overlayMaps).addTo(map);
-
-
-
-
-
 
 // General properties
 
