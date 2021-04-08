@@ -78,7 +78,7 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 
 ### Hungary
 
-{% include_relative /Data/Research-Projects/ACES/Hungary/readme.md %}
+{% include_relative /Data/Research-Projects/Hungary/readme.md %}
 
 ## Nordic Grid
 

@@ -8,4 +8,4 @@ These are two simultaneous recordings.
 | Vestmanna | Hungary  | Continental Europe| 0.1 sec |  2019-07-09 - 2019-07-15 | 7.0  | [OSF link](https://osf.io/u9ekr/download) | 18.8 |
 
 
-**Licensing**: Free for usage.
+**Licensing**: *Open for scientific purposes.*
