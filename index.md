@@ -70,6 +70,16 @@ var greenpurpleIcon = L.icon({
 		shadowSize:  [41, 41]
 });
 
+var bluepurpleIcon = L.icon({
+    iconUrl: 'assets/js/images/marker-icon-blue-purple.png',
+    shadowUrl: 'assets/js/images/marker-shadow.png',
+		iconSize:    [25, 41],
+		iconAnchor:  [12, 41],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+		shadowSize:  [41, 41]
+});
+
 var greenblueIcon = L.icon({
     iconUrl: 'assets/js/images/marker-icon-green-blue.png',
     shadowUrl: 'assets/js/images/marker-shadow.png',
@@ -102,7 +112,7 @@ var yellowTarget = L.icon({
 
 var TransnetBW      = L.marker([ 48.777111, 9.180770]),
     RTE             = L.marker([ 48.856666, 2.3522]),
-		FinGrid         = L.marker([ 60.169857, 24.938379]);
+		FinGrid         = L.marker([ 60.186463, 24.829515], {icon: bluepurpleIcon});
 
 var Cork     	      = L.marker([ 51.8, -8.4 ], {icon: greenIcon}),
     Reykjavik     	= L.marker([ 64.1, -21.7], {icon: greenIcon}),
@@ -115,7 +125,7 @@ var Cork     	      = L.marker([ 51.8, -8.4 ], {icon: greenIcon}),
 		Erice         	= L.marker([ 38.036740,  12.583740], {icon: greenIcon}),
 		Krakau        	= L.marker([ 51.205551,  16.211000], {icon: greenIcon}),
     Tallinn       	= L.marker([ 59.4,  24.7], {icon: greenIcon}),
-    Stockholm     	= L.marker([ 59.3,  18.1], {icon: greenIcon}),
+    Stockholm     	= L.marker([ 59.350029, 18.070009], {icon: greenpurpleIcon}),
     SaltLake        = L.marker([ 40.6,-111.8], {icon: greenIcon}),
     College        	= L.marker([ 30.5, -96.3], {icon: greenIcon}),
     CapeTown        = L.marker([-33.9,  18.5], {icon: greenIcon}),
@@ -135,6 +145,12 @@ var Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: yellowIcon}),
     NorthSweden     = L.marker([ 66.353562, 19.323426], {icon: yellowTarget}),
     MidSweden       = L.marker([ 63.126178, 15.205319], {icon: yellowTarget}),
     SouthSweden     = L.marker([ 58.310608, 14.511484], {icon: yellowTarget});
+
+var STRONg2rid_CTH  = L.marker([ 57.689769, 11.973701], {icon: purpleIcon}),
+    STRONg2rid_LTH  = L.marker([ 55.711850, 13.210120], {icon: purpleIcon}),
+    STRONg2rid_LTU  = L.marker([ 65.617792, 22.135986], {icon: purpleIcon}),
+    STRONg2rid_TTY  = L.marker([ 61.494200, 23.780750], {icon: purpleIcon}),
+    STRONg2rid_NTNU = L.marker([ 63.419443, 10.401995], {icon: purpleIcon});
 
 
 var KIT_logo = '<img src="assets/img/KIT_logo.jpg" width="45" height="45"/></br>'
@@ -157,7 +173,11 @@ Split.bindPopup(KIT_logo + '<b>Split</b>, Croatia | Continental Europe</br> 2019
 Erice.bindPopup(KIT_logo + '<b>Erice</b>, Italy | Continental Europe</br> 2019-07-02 - 2019-07-06 | 5.0 days</br> <a href="https://osf.io/c754b/download">download</a> - 17.1 mb', {maxWidth:500})
 Krakau.bindPopup(KIT_logo + '<b>Krakau</b>, Poland | Continental Europe</br> 2019-04-04 - 2019-04-07 | 4.0 days</br> <a href="https://osf.io/wq3te/download">download</a> - 13.6 mb', {maxWidth:500})
 Tallinn.bindPopup(KIT_logo + '<b>Tallinn</b>, Estonia | Baltic Grid</br> 2019-03-25 - 2019-04-17 | 22.9 days</br> <a href="https://osf.io/t5ske/download">download</a> - 79.0 mb', {maxWidth:500})
-Stockholm.bindPopup(KIT_logo + '<b>Stockholm</b>, Sweden | Nordic Grid</br> 2019-05-06 - 2019-05-13 | 6.7 days</br> <a href="https://osf.io/e2xfb/download">download</a> - 23.1 mb', {maxWidth:500})
+
+
+Stockholm.bindPopup(KIT_logo + '<b>Stockholm</b>, Sweden | Nordic Grid</br> 2019-05-06 - 2019-05-13 | 6.7 days</br> <a href="https://osf.io/e2xfb/download">download</a> - 23.1 mb <hr/> 2013-09-09 - 2013-07-11 | 1.5 days </br> <a href="https://osf.io/wmuct/download">download</a> - 20.5 mb [7 locations synchronously]</br> <a href="database/#synchronised-measurements">link to database</a>', {maxWidth:500})
+
+
 SaltLake.bindPopup(KIT_logo + '<b>Salt Lake City</b>, USA | Western Interconnection</br> 2019-05-19 - 2019-05-25 | 6.4 days</br> <a href="https://osf.io/8rp4v/download">download</a> - 16.5 mb', {maxWidth:500})
 College.bindPopup(KIT_logo + '<b>College Station</b>, USA | Texas Interconnection</br> 2019-05-15 - 2019-05-16 | 1.4 days</br> <a href="https://osf.io/t5wxz/download">download</a> - 3.7 mb<hr/>2019-05-20 - 2019-05-23 | 3.7 days</br> <a href="https://osf.io/zngy8/download">download</a> - 9.6 mb', {maxWidth:500})
 CapeTown.bindPopup(KIT_logo + '<b>Cape Town</b>, South Africa | South African Grid</br> 2017-11-19 - 2017-11-28 | 9.5 days</br> <a href="https://osf.io/gzk7d/download">download</a> - 27.0 mb', {maxWidth:500})
@@ -179,11 +199,19 @@ Oldenburg.bindPopup(KIT_logo + '<b>Oldenburg</b>, Germany | Continental Europe</
 Lisbon.bindPopup(KIT_logo + '<b>Lisbon</b>, Portugal | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary<hr/> 2018-02-14 - 2018-02-21 | 6.8 days</br> <a href="https://osf.io/5zgwn/download">download</a> - 16.8 mb', {maxWidth:500})
 Istanbul.bindPopup(KIT_logo + '<b>Istanbul</b>, Turkey | Continental Europe</br> 2019-07-09 - 2019-08-16 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary', {maxWidth:500})
 
+STRONg2rid_CTH.bindPopup('<b>Gothenburg</b>, Sweden | Nordic Grid</br> 2013-09-09 - 2013-09-11 | 1.5 days </br> <a href="https://osf.io/prqk8/download">download</a> - 20.6 mb | [7 locations synchronously]</br> <a href="database/#synchronised-measurements">link to database</a>', {maxWidth:500})
+STRONg2rid_LTH.bindPopup('<b>Lund</b>, Sweden | Nordic Grid</br> 2013-09-09 - 2013-09-11 | 1.5 days </br> <a href="https://osf.io/8sp9k/download">download</a> - 22.4 mb [7 locations synchronously]</br> <a href="database/#synchronised-measurements">link to database</a>', {maxWidth:500})
+// STRONg2rid_KTH.bindPopup('<b>Stockholm</b>, Sweden | Nordic Grid</br> 2013-09-09 - 2013-09-11 | 1.5 days </br> <a href="https://osf.io/wmuct/download">download</a> - 20.5 mb [7 locations synchronously]</br> <a href="database/#synchronised-measurements">link to database</a>', {maxWidth:500})
+STRONg2rid_LTU.bindPopup('<b>Luleå</b>, Sweden | Nordic Grid</br> 2013-09-09 - 2013-09-11 | 1.5 days </br> <a href="https://osf.io/ar4jn/download">download</a> - 22.0 mb [7 locations synchronously]</br> <a href="database/#synchronised-measurements">link to database</a>', {maxWidth:500})
+STRONg2rid_TTY.bindPopup('<b>Tampere</b>, Finland | Nordic Grid</br> 2013-09-09 - 2013-09-11 | 1.5 days </br> <a href="https://osf.io/nfu5d/download">download</a> - 20.0 mb [7 locations synchronously]</br> <a href="database/#synchronised-measurements">link to database</a>', {maxWidth:500})
+// STRONg2rid_AU.bindPopup('<b>Aalto</b>, Finland | Nordic Grid</br> 2013-09-09 - 2013-09-11 | 1.5 days </br> <a href="https://osf.io/qb3sa/download">download</a> - 27.3 mb [7 locations synchronously]</br> <a href="database/#synchronised-measurements">link to database</a>', {maxWidth:500})
+STRONg2rid_NTNU.bindPopup('<b>Trondheim</b>, Norway | Nordic Grid</br> 2013-09-09 - 2013-09-11 | 1.5 days </br> <a href="https://osf.io/67fjs/download">download</a> - 28.3 mb [7 locations synchronously]</br> <a href="database/#synchronised-measurements">link to database</a>', {maxWidth:500})
 
 // TSO data
 TransnetBW.bindPopup(TransNetBW_logo + '<b>Stuttgart</b>, Germany | Continental Europe</br> From July 2011 - March 2020</br> <a href="database/#continental-europe">link to database</a> - 1.1 gb - 1 sec resolution')
 RTE.bindPopup(RTE_logo + '<b>Paris</b>, France | Continental Europe</br> From October 2014 - May 2020</br> <a href="database/#continental-europe">link to database</a> - 100.7 mb - 10 sec resolution')
-FinGrid.bindPopup(Fingrid_logo + '<b>Helsinki</b>, Finland | Nordic Grid </br> From January 2015 - December 2019</br> <a href="database/#finland">link to database</a> - 5.1 gb - 0.1 sec resolution')
+
+FinGrid.bindPopup(Fingrid_logo + '<b>Helsinki</b>, Finland | Nordic Grid </br> From January 2015 - December 2019</br> <a href="database/#finland">link to database</a> - 5.1 gb - 0.1 sec resolution <hr/> 2013-09-09 - 2013-07-11 | 1.5 days </br> <a href="https://osf.io/wmuct/download">download</a> - 20.5 mb [7 locations synchronously]</br> <a href="database/#synchronised-measurements">link to database</a>', {maxWidth:500})
 
 
 var SynchMeasurements = [
@@ -202,11 +230,21 @@ var SemiSynchMeasurementsNG = [
 		[[63.126178, 15.205319],[58.310608, 14.511484]]
 ];
 
+var SemiSynchMeasurementsNGSTRONG = [
+    [[59.350029, 18.070009],[57.689769, 11.973701]],
+    [[59.350029, 18.070009],[55.711850, 13.210120]],
+    [[59.350029, 18.070009],[65.617792, 22.135986]],
+    [[59.350029, 18.070009],[61.494200, 23.780750]],
+    [[59.350029, 18.070009],[60.186463, 24.829515]],
+    [[59.350029, 18.070009],[63.419443, 10.401995]]
+];
+
 var SynchMeasurementsLines = L.polyline(SynchMeasurements, {color: 'purple'})
 var SemiSynchMeasurementsLines = L.polyline(SemiSynchMeasurements, {color: 'purple', dashArray: '6'})
 var SemiSynchMeasurementsNGLines = L.polyline(SemiSynchMeasurementsNG, {color: 'gold', dashArray: '6'})
+var SemiSynchMeasurementsNGSTRONGLines = L.polyline(SemiSynchMeasurementsNGSTRONG, {color: 'purple', dashArray: '6'})
 
-var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, DTU1, DTU2, NorthSweden, MidSweden, SouthSweden, SynchMeasurementsLines, SemiSynchMeasurementsLines, SemiSynchMeasurementsNGLines]);
+var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, DTU1, DTU2, NorthSweden, MidSweden, SouthSweden, SynchMeasurementsLines, SemiSynchMeasurementsLines, SemiSynchMeasurementsNGLines, SemiSynchMeasurementsNGSTRONGLines]);
 
 var NorthAmerica = L.layerGroup([SaltLake, College]);
 
@@ -221,13 +259,14 @@ var y2020 = L.layerGroup([Tokyo, NorthSweden, MidSweden, SouthSweden, SemiSynchM
 var y2019 = L.layerGroup([Vestmanna, GranCanaria, Karlsruhe, Oldenburg, Lisbon, Istanbul, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, SaltLake, College, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
 var y2018 = L.layerGroup([PalmaMallorca, DTU1, DTU2]);
 var y2017 = L.layerGroup([Reykjavik, CapeTown]);
+var y2013 = L.layerGroup([STRONg2rid_CTH, STRONg2rid_LTH, Stockholm, STRONg2rid_LTU, STRONg2rid_TTY, FinGrid, STRONg2rid_NTNU, SemiSynchMeasurementsNGSTRONGLines]);
 
 // Deploy map
 
 var map = L.map('map', {
   'center': [25, -5],
   'zoom': 2,
-  'layers': [basemap, TSOs, y2020, y2019, y2018, y2017]
+  'layers': [basemap, TSOs, y2020, y2019, y2018, y2017, y2013]
 });
 
 // GeoJSONs
@@ -248,7 +287,6 @@ L.geoJson(SouthAfricaGeo, {style: style, onEachFeature: onEachFeature}).addTo(ma
 
 
 
-
 // Layers and layer control
 
 var LayerOfMap = { "<span style='color: black'><b>OpenStreetMap</b></span>": basemap};
@@ -258,6 +296,7 @@ var overlayMaps = {
     "<span style='color: black'>2019</span>": y2019,
     "<span style='color: black'>2018</span>": y2018,
     "<span style='color: black'>2017</span>": y2017,
+    "<span style='color: black'>2013</span>": y2013,
 };
 
 
@@ -266,9 +305,31 @@ L.control.layers(LayerOfMap, overlayMaps).addTo(map);
 // General properties
 
 
-SynchMeasurementsLines.bindPopup("Synchronous Measurements between Karlsruhe, Oldenburg, Lisbon, and Istanbul. Békéscsaba and Győr, Hungary, also have recording, but not GPS synchronised.")
+SynchMeasurementsLines.bindPopup("GPS-Synchronous recordings from Karlsruhe, Oldenburg, Lisbon, and Istanbul. Also: Békéscsaba and Győr, Hungary, yet not GPS synchronised.")
 
 SemiSynchMeasurementsLines.bindPopup("Measurements in Békéscsaba and Győr, Hungary, in the same time frame as between Karlsruhe, Oldenburg, Lisbon, and Istanbul.")
+
+SemiSynchMeasurementsNGLines.bindPopup("Measurements in the north, middle, and south of Sweden. Locations are indicative, due to data protection.")
+
+SemiSynchMeasurementsNGSTRONGLines.bindPopup("Synchronous recordings from Gothenburg, Lund, Stockholm, and Luleå, Sweden, Tampere and Aalto, Finland, and Trondheim, Norway")
+
+
+SynchMeasurementsLines.bringToFront()
+SemiSynchMeasurementsLines.bringToFront()
+SemiSynchMeasurementsNGLines.bringToFront()
+SemiSynchMeasurementsNGSTRONGLines.bringToFront()
+
+// SynchMeasurementsLines.on('mouseover', function (e) { this.openPopup(); });
+// SynchMeasurementsLines.on('mouseout', function (e) { this.closePopup(); });
+
+// SemiSynchMeasurementsLines.on('mouseover', function (e) { this.openPopup(); });
+// SemiSynchMeasurementsLines.on('mouseout', function (e) { this.closePopup(); });
+
+// SemiSynchMeasurementsNGLines.on('mouseover', function (e) { this.openPopup(); });
+// SemiSynchMeasurementsNGLines.on('mouseout', function (e) { this.closePopup(); });
+
+// SemiSynchMeasurementsNGSTRONGLines.on('mouseover', function (e) { this.openPopup(); });
+// SemiSynchMeasurementsNGSTRONGLines.on('mouseout', function (e) { this.closePopup(); });
 
 
 // Power-grids
