@@ -82,6 +82,10 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 
 ## Nordic Grid
 
+### Synchronised measurements
+
+{% include_relative /Data/Research-Projects/STRONg2rid/readme.md %}
+
 ### Sweden
 
-{% include_relative /Data/Nordic-Grid/Sweden/readme.md%}
+{% include_relative /Data/Nordic-Grid/Sweden/readme.md %}
