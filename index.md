@@ -304,7 +304,6 @@ L.control.layers(LayerOfMap, overlayMaps).addTo(map);
 
 // General properties
 
-
 SynchMeasurementsLines.bindPopup("GPS-Synchronous recordings from Karlsruhe, Oldenburg, Lisbon, and Istanbul. Also: Békéscsaba and Győr, Hungary, yet not GPS synchronised.")
 
 SemiSynchMeasurementsLines.bindPopup("Measurements in Békéscsaba and Győr, Hungary, in the same time frame as between Karlsruhe, Oldenburg, Lisbon, and Istanbul.")
