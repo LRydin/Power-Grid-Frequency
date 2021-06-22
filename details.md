@@ -16,4 +16,4 @@ This is not a static database, we welcome everyone to contribute their data to e
 This database and website are register in the [https://www.re3data.org/](https://www.re3data.org/repository/r3d100013364) registry.
 
 
-<img src="assets/img/github_dark.png" width="200" height="200" border="0" class="center" /><img src="assets/img/osf.png" width="200" height="200" border="0" class="center" />  <img src="assets/img/OPSD_logo.png" width="230" height="230" border="0" class="center" /> <img src="assets/img/re3data_logo.png" height="230" border="0" class="center" />
+<img src="assets/img/github_dark.png" width="90" height="90" border="20" class="center" /><img src="assets/img/osf.png" width="90" height="90" border="20" class="center" />  <img src="assets/img/OPSD_logo.png" width="105" height="105" border="20" class="center" /> <img src="assets/img/re3data_logo.png" height="20" width="260" border="20" class="center" /> <img src="assets/img/h2020.png" height="20" width="480" border="20" class="center" />
