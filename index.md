@@ -142,8 +142,8 @@ var Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: yellowIcon}),
     Tokyo           = L.marker([ 35.682604,139.752766], {icon: yellowIcon}),
     NorthSweden     = L.marker([ 66.353562, 19.323426], {icon: yellowTarget}),
     MidSweden       = L.marker([ 63.126178, 15.205319], {icon: yellowTarget}),
-    SouthSweden     = L.marker([ 58.310608, 14.511484], {icon: yellowTarget});
-    Dublin     	    = L.marker([ 53.306656, -6.225348], {icon: yellowIcon}),
+    SouthSweden     = L.marker([ 58.310608, 14.511484], {icon: yellowTarget}),
+    Dublin     	    = L.marker([ 53.306656, -6.225348], {icon: yellowIcon});
 
 var STRONg2rid_CTH  = L.marker([ 57.689769, 11.973701], {icon: purpleIcon}),
     STRONg2rid_LTH  = L.marker([ 55.711850, 13.210120], {icon: purpleIcon}),
