@@ -19,9 +19,7 @@ classes: wide
 <script type="text/javascript" src="assets/GeoJSON/Baltic.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/NationalGrid.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/ContinentalEurope.js"></script>
-<!--
-	<script type="text/javascript" src="assets/GeoJSON/Irish.js"></script>
--->
+<script type="text/javascript" src="assets/GeoJSON/Irish.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/Iceland.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/Faroe.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/Mallorca.js"></script>
@@ -145,6 +143,7 @@ var Bekescsaba     	= L.marker([ 46.6,  21.0], {icon: yellowIcon}),
     NorthSweden     = L.marker([ 66.353562, 19.323426], {icon: yellowTarget}),
     MidSweden       = L.marker([ 63.126178, 15.205319], {icon: yellowTarget}),
     SouthSweden     = L.marker([ 58.310608, 14.511484], {icon: yellowTarget});
+    Dublin     	    = L.marker([ 53.306656, -6.225348], {icon: yellowIcon}),
 
 var STRONg2rid_CTH  = L.marker([ 57.689769, 11.973701], {icon: purpleIcon}),
     STRONg2rid_LTH  = L.marker([ 55.711850, 13.210120], {icon: purpleIcon}),
@@ -192,6 +191,7 @@ Tokyo.bindPopup(DTU_logo + '<b>Tokyo</b>, Japan | Japanese 50Hz</br> 20220-01-01
 NorthSweden.bindPopup('<b>North Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.0 gb</br>', {maxWidth:500})
 MidSweden.bindPopup('<b>Mid Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.2 gb</br>', {maxWidth:500})
 SouthSweden.bindPopup('<b>South Sweden</b>, Sweden | Nordic Grid</br> 2020-01-01 - 2020-12-31 | 366 days</br> <a href="database/#sweden">link to database</a> - 9.1 gb</br>', {maxWidth:500})
+Dublin.bindPopup('<b>Dublin</b>, Ireland | Irish Grid</br> 2014  <a href="https://osf.io/y9nrh/download">download</a> - 1.22GB', {maxWidth:500})
 
 // Sync Measurements
 Karlsruhe.bindPopup(KIT_logo + '<b>Karlsruhe</b>, Germany | Continental Europe</br> 2019-07-09 - 2019-08-18 | 41.0 days</br> <a href="https://osf.io/p5xyr/download">download</a> - 218 mb [4 locations synchronously]</br> See data: Békéscsaba, Győr, Hungary', {maxWidth:500})
