@@ -278,7 +278,7 @@ L.geoJson(RussianGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(BalticGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(NationalGridGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(ContinentalEuropeGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
-// L.geoJson(IrishGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
+L.geoJson(IrishGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(IcelandGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(FaroeGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
 L.geoJson(MallorcaGeo, {style: style, onEachFeature: onEachFeature}).addTo(map);
