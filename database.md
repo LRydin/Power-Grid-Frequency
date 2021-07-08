@@ -89,3 +89,7 @@ df = pd.read_csv('path/to/germany_2017_01.csv.zip', index_col=0)
 ### Sweden
 
 {% include_relative /Data/Nordic-Grid/Sweden/readme.md %}
+
+### Ireland
+
+{% include_relative /Data/Research-Projects/Ireland/readme.md %}
