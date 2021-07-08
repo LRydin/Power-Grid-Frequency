@@ -4,10 +4,10 @@ These recordings inlude the day, the time, the tenth of a second, two frequency 
 
 | Location | Country | Synchronous Area | resolution |  date range | number of days | direct link | size (GB) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Dublin | Ireland | Irish Grid | 0.1 sec |  2014 (several days) | ? | [OSF link](https://osf.io/y9nrh/) | 1.22 |
-| Dublin | Ireland | Irish Grid | 0.1 sec |  2015 (several days) | ? | [OSF link](https://osf.io/38fnx/) | 2.56 |
-| Dublin | Ireland | Irish Grid | 0.1 sec |  2016 (several days) | ? | [OSF link](https://osf.io/8dqk2/) | 1.79 |
-| Dublin | Ireland | Irish Grid | 0.1 sec |  2017 (several days) | ? | [OSF link](https://osf.io/5rsq9/) | 2.35 |
+| Dublin | Ireland | Irish Grid | 0.1 sec |  2014 (several days) | ? | [OSF link](https://osf.io/y9nrh/download) | 1.22 |
+| Dublin | Ireland | Irish Grid | 0.1 sec |  2015 (several days) | ? | [OSF link](https://osf.io/38fnx/download) | 2.56 |
+| Dublin | Ireland | Irish Grid | 0.1 sec |  2016 (several days) | ? | [OSF link](https://osf.io/8dqk2/download) | 1.79 |
+| Dublin | Ireland | Irish Grid | 0.1 sec |  2017 (several days) | ? | [OSF link](https://osf.io/5rsq9/download) | 2.35 |
 
 **Licensing**: Please cite as:
 >*Statistical Correlation between Wind Penetration and Grid Frequency Variations in the Irish Network*, M. Adeen, G. M. Jónsdóttir and F. Milano, 2019 IEEE International Conference on Environment and Electrical Engineering and 2019 IEEE Industrial and Commercial Power Systems Europe (EEEIC / I&CPS Europe), 2019, pp. 1-6, doi: [10.1109/EEEIC.2019.8783475](https://ieeexplore.ieee.org/document/8783475)
