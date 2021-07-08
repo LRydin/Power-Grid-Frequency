@@ -19,7 +19,7 @@ classes: wide
 <script type="text/javascript" src="assets/GeoJSON/Baltic.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/NationalGrid.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/ContinentalEurope.js"></script>
-<!-- <script type="text/javascript" src="assets/GeoJSON/Irish.js"></script>-->
+<script type="text/javascript" src="assets/GeoJSON/Irish.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/Iceland.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/Faroe.js"></script>
 <script type="text/javascript" src="assets/GeoJSON/Mallorca.js"></script>
