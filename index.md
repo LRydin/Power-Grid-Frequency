@@ -244,7 +244,7 @@ var SemiSynchMeasurementsLines = L.polyline(SemiSynchMeasurements, {color: 'purp
 var SemiSynchMeasurementsNGLines = L.polyline(SemiSynchMeasurementsNG, {color: 'gold', dashArray: '6'})
 var SemiSynchMeasurementsNGSTRONGLines = L.polyline(SemiSynchMeasurementsNGSTRONG, {color: 'purple', dashArray: '6'})
 
-var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, DTU1, DTU2, NorthSweden, MidSweden, SouthSweden, SynchMeasurementsLines, SemiSynchMeasurementsLines, SemiSynchMeasurementsNGLines, SemiSynchMeasurementsNGSTRONGLines]);
+var Europe = L.layerGroup([FinGrid, TransnetBW, RTE, Reykjavik, Vestmanna, GranCanaria, PalmaMallorca, Karlsruhe, Oldenburg, Lisbon, Istanbul, London, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, DTU1, DTU2, NorthSweden, MidSweden, SouthSweden, SynchMeasurementsLines, SemiSynchMeasurementsLines, SemiSynchMeasurementsNGLines, SemiSynchMeasurementsNGSTRONGLines, Dublin]);
 
 var NorthAmerica = L.layerGroup([SaltLake, College]);
 
@@ -258,7 +258,10 @@ var TSOs = L.layerGroup([TransnetBW, RTE, FinGrid, London]);
 var y2020 = L.layerGroup([Tokyo, NorthSweden, MidSweden, SouthSweden, SemiSynchMeasurementsNGLines]);
 var y2019 = L.layerGroup([Vestmanna, GranCanaria, Karlsruhe, Oldenburg, Lisbon, Istanbul, Lauris, Split, Erice, Krakau, Tallinn, Stockholm, Bekescsaba, Gyor, StPetersburg, SaltLake, College, SynchMeasurementsLines, SemiSynchMeasurementsLines]);
 var y2018 = L.layerGroup([PalmaMallorca, DTU1, DTU2]);
-var y2017 = L.layerGroup([Reykjavik, CapeTown]);
+var y2017 = L.layerGroup([Reykjavik, CapeTown, Dublin]);
+var y2016 = L.layerGroup([Dublin]);
+var y2015 = L.layerGroup([Dublin]);
+var y2014 = L.layerGroup([Dublin]);
 var y2013 = L.layerGroup([STRONg2rid_CTH, STRONg2rid_LTH, Stockholm, STRONg2rid_LTU, STRONg2rid_TTY, FinGrid, STRONg2rid_NTNU, SemiSynchMeasurementsNGSTRONGLines]);
 
 // Deploy map
@@ -266,7 +269,7 @@ var y2013 = L.layerGroup([STRONg2rid_CTH, STRONg2rid_LTH, Stockholm, STRONg2rid_
 var map = L.map('map', {
   'center': [25, -5],
   'zoom': 2,
-  'layers': [basemap, TSOs, y2020, y2019, y2018, y2017, y2013]
+  'layers': [basemap, TSOs, y2020, y2019, y2018, y2017, y2016, y2015, y2014, y2013]
 });
 
 // GeoJSONs
