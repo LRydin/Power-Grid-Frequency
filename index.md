@@ -206,7 +206,7 @@ noUiSlider.create(slider, {
     start: [2011, 2021], // Handle start position
     connect: true, // Display a colored bar between the handles
     step: 1, // Steps shown, i.e., year by year
-    behaviour: 'drag', // Move handle on tap, bar is draggable
+    behaviour: 'tap-drag', // Move handle on tap, bar is draggable
     range: { // Slider can select '0' to '100'
         'min': 2011,
         'max': 2021
